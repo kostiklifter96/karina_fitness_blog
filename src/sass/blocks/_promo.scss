@@ -1,0 +1,52 @@
+.promo {
+    min-height: 100vh;
+    position: relative;
+    background: url("../../../public/image/MainBackground.jpg") no-repeat 40% /
+        cover;
+    padding-top: 170px;
+    &__title {
+        width: 535px;
+        margin-top: 10px;
+    }
+    &__subtitle {
+        position: relative;
+        padding-left: 10px;
+        z-index: 2;
+        @include before_circle;
+        &:before {
+            background: $primary-color;
+        }
+    }
+    &__btns {
+        margin-top: 25px;
+        width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    a {
+        color: #000000;
+        &:visited {
+            color: #000000;
+        }
+    }
+    &__links {
+        font-weight: 700;
+        text-decoration: none;
+
+        &-main {
+            font-weight: bold;
+
+            &:hover {
+                padding: 13px 26px;
+                box-shadow: 0 0 10px $primary-color;
+                transition: all 0.4s ease;
+            }
+        }
+
+        &:hover {
+            color: $primary-color;
+            transition: all 0.4s ease;
+        }
+    }
+}
