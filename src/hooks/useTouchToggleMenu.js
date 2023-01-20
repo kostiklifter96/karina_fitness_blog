@@ -37,14 +37,15 @@ export const useTouchToggleMenu = () => {
             } else {
                 setActiveStyle(false);
             }
-        } else {
-            // top - bottom
-            if (yDiff > 0) {
-                setActiveStyle(false);
-            } else {
-                setActiveStyle(true);
-            }
         }
+        // else {
+        //     // top - bottom
+        //     if (yDiff > 0) {
+        //         setActiveStyle(false);
+        //     } else {
+        //         setActiveStyle(true);
+        //     }
+        // }
 
         setTouchX(null);
         setTouchY(null);
