@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/karina_fitness_blog/static/css/main.7fe8d7cd.css",
-    "main.js": "/karina_fitness_blog/static/js/main.f15661d1.js",
+    "main.js": "/karina_fitness_blog/static/js/main.c249ca79.js",
     "static/media/Blue.jpg": "/karina_fitness_blog/static/media/Blue.ceefc438ea6dd79ffd9e.jpg",
     "static/media/MainBackground.jpg": "/karina_fitness_blog/static/media/MainBackground.556f8737c9dc51e1ca22.jpg",
     "index.html": "/karina_fitness_blog/index.html",
     "main.7fe8d7cd.css.map": "/karina_fitness_blog/static/css/main.7fe8d7cd.css.map",
-    "main.f15661d1.js.map": "/karina_fitness_blog/static/js/main.f15661d1.js.map"
+    "main.c249ca79.js.map": "/karina_fitness_blog/static/js/main.c249ca79.js.map"
   },
   "entrypoints": [
     "static/css/main.7fe8d7cd.css",
-    "static/js/main.f15661d1.js"
+    "static/js/main.c249ca79.js"
   ]
 }
