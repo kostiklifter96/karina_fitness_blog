@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom"
-import { Modal } from "../Modal/Modal"
-import { Loading } from "../Loading/Loader"
+import { Link } from "react-router-dom";
+import { Modal } from "../Modal/Modal";
+import { Loading } from "../Loading/Loader";
 
-import { useSendEmail } from "./../../hooks/useSendEmail"
+import { useSendEmail } from "./../../hooks/useSendEmail";
 
 export const Contacts = () => {
     const [
@@ -14,7 +14,7 @@ export const Contacts = () => {
         modalActiv,
         setModalActiv,
         textModal,
-    ] = useSendEmail()
+    ] = useSendEmail();
 
     return (
         <>
@@ -31,9 +31,9 @@ export const Contacts = () => {
                         </div>
 
                         <div className='contacts__description'>
-                            <h2 className='title title__fz16 contacts__title'>
+                            {/* <h2 className='title title__fz16 contacts__title'>
                                 Контакты
-                            </h2>
+                            </h2> */}
                             <div className='title title__fz36 contacts__subtitle'>
                                 Свяжитесь со мной
                             </div>
@@ -191,5 +191,5 @@ export const Contacts = () => {
                 </div>
             </section>
         </>
-    )
-}
+    );
+};

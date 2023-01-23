@@ -7,9 +7,9 @@ export const Skills = () => {
     return (
         <section className='skills' id='skills'>
             <div className='container'>
-                <h2 className='title title__fz16 title__section-title'>
+                {/* <h2 className='title title__fz16 title__section-title'>
                     Навыки
-                </h2>
+                </h2> */}
                 <div className='title title__fz36 title__section-subtitle'>
                     Программа Naumova_team
                 </div>

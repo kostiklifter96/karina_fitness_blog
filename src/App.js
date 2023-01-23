@@ -33,7 +33,7 @@ function App() {
             <Skills />
             <Portfolio />
             <ListQuestions />
-            <PriceList />
+            {/* <PriceList /> */}
             <Contacts />
         </div>
     );

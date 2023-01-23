@@ -6,9 +6,9 @@ export const ListQuestions = () => {
     return (
         <section className='listQuestions' id='listQuestions'>
             <div className='container'>
-                <h2 className='title title__fz16 title__section-title'>
+                {/* <h2 className='title title__fz16 title__section-title'>
                     Вопросы
-                </h2>
+                </h2> */}
                 <div className='title title__fz36 title__section-subtitle'>
                     Вопрос-ответ
                 </div>

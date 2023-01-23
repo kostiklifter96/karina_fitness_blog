@@ -4,9 +4,9 @@ export const Portfolio = () => {
     return (
         <section className='portfolio' id='portfolio'>
             <div className='container'>
-                <h2 className='title title__fz16 title__section-title'>
+                {/* <h2 className='title title__fz16 title__section-title'>
                     Портфолио
-                </h2>
+                </h2> */}
                 <div className='title title__fz36 title__section-subtitle'>
                     Мои работы
                 </div>
