@@ -6,7 +6,6 @@ import { Resume } from "./components/resume/Resume";
 import { Skills } from "./components/skills/Skills";
 import "./sass/libs/style.scss";
 import { Portfolio } from "./components/portfolio/Portfolio";
-import { PriceList } from "./components/priceList/PriceList";
 import { Contacts } from "./components/contacts/Contacts";
 import { useTouchToggleMenu } from "./hooks/useTouchToggleMenu";
 import { ListQuestions } from "./components/listQuestions/ListQuestions";
@@ -33,7 +32,6 @@ function App() {
             <Skills />
             <Portfolio />
             <ListQuestions />
-            {/* <PriceList /> */}
             <Contacts />
         </div>
     );

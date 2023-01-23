@@ -1,9 +1,6 @@
 import React from "react";
-import { useTouchToggleMenu } from "./../../hooks/useTouchToggleMenu";
 
 export const Menu = ({ activeStyle, removeActiveStyle }) => {
-    // useTouchToggleMenu();
-
     let menuStyle = "menu";
 
     if (activeStyle) {
@@ -55,12 +52,6 @@ export const Menu = ({ activeStyle, removeActiveStyle }) => {
                             onClick={() => removeActiveStyle()}
                         >
                             <a href='#portfolio'>МОИ РАБОТЫ</a>
-                        </li>
-                        <li
-                            className='menu__link'
-                            onClick={() => removeActiveStyle()}
-                        >
-                            <a href='#price'>ПРАЙС-ЛИСТ</a>
                         </li>
                         <li
                             className='menu__link'
