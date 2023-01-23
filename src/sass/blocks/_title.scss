@@ -12,7 +12,7 @@
     }
     &__fz16 {
         font-size: 16px;
-        line-height: 24px;
+        line-height: 15px;
     }
     &__fz20 {
         font-size: 20px;
@@ -28,12 +28,12 @@
     &__section-title {
         position: relative;
         text-align: center;
-        @include before_circle;
-        &:before {
-            top: -25%;
-            left: 50%;
-            transform: translate(-50%);
-        }
+        // @include before_circle;
+        // &:before {
+        //     top: -25%;
+        //     left: 50%;
+        //     transform: translate(-50%);
+        // }
     }
 
     &__section-subtitle {

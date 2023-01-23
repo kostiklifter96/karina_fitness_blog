@@ -10,7 +10,7 @@ export const AboutMe = () => {
 
                     <div className='about__descr'>
                         <h2 className='title title__fz16 about__title'>
-                            Про Меня
+                            Обо Мне
                         </h2>
                         <div className='title title__fz36 about__subtitle'>
                             Меня зовут Карина

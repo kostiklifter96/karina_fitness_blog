@@ -8,15 +8,15 @@
         width: 535px;
         margin-top: 10px;
     }
-    &__subtitle {
-        position: relative;
-        padding-left: 10px;
-        z-index: 2;
-        @include before_circle;
-        &:before {
-            background: $primary-color;
-        }
-    }
+    // &__subtitle {
+    //     position: relative;
+    //     padding-left: 10px;
+    //     z-index: 2;
+    //     @include before_circle;
+    //     &:before {
+    //         background: $primary-color;
+    //     }
+    // }
     &__btns {
         margin-top: 25px;
         width: 250px;

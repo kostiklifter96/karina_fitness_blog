@@ -6,7 +6,9 @@ export const Resume = () => {
     return (
         <section className='resume' id='resume'>
             <div className='container'>
-                <h2 className='title title__fz16 title__section-title'>Опыт</h2>
+                <h2 className='title title__fz16 title__section-title'>
+                    Образование
+                </h2>
                 <div className='title title__fz36 title__section-subtitle'>
                     Чем я буду полезна
                 </div>

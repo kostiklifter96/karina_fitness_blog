@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 export const Promo = ({ addActiveStyle }) => {
     return (
         <section className='promo'>
@@ -13,14 +12,14 @@ export const Promo = ({ addActiveStyle }) => {
                     Меня зовут Карина Наумова
                 </div>
                 <h1 className='title title__fz48 promo__title'>
-                    Я фитнес-тренер из города Минска
+                    Я фитнес-тренер онлайн
                 </h1>
                 <div className='promo__btns'>
                     <a href='#portfolio' className='promo__links-main btn'>
-                        Портфолио
+                        О проекте
                     </a>
                     <a href='#about' className='promo__links'>
-                        Про меня
+                        Обо мне
                     </a>
                 </div>
             </div>

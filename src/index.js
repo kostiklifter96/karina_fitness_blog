@@ -7,7 +7,8 @@ import { Policy } from "./components/Policy/Policy";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <BrowserRouter basename='/karina_fitness_blog'>
+        {/* basename='/karina_fitness_blog' */}
+        <BrowserRouter>
             <Routes>
                 <Route exact path='/' element={<App />} />
                 <Route path='/policy' element={<Policy />} />
