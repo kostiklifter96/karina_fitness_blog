@@ -8,7 +8,7 @@
         grid-auto-rows: 280px;
         gap: 5px;
 
-        span {
+        picture {
             transition: all 0.6s;
             img {
                 width: 100%;
@@ -16,7 +16,7 @@
                 object-fit: cover;
             }
             &:hover {
-                transform: scale(1.05);
+                transform: scale(1.1);
                 filter: drop-shadow(0 0 10px $main-color);
             }
         }

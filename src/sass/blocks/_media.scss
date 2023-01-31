@@ -140,7 +140,7 @@
         }
 
         &__photo {
-            background: url("../../../public/image/Blue.jpg") no-repeat 30% /
+            background: url("../../../public/image/Blue-min.jpg") no-repeat 30% /
                 cover;
         }
 
@@ -162,11 +162,12 @@
     .resume {
         &__wrapper {
             grid-template-columns: 1fr;
-            row-gap: 40px;
+            row-gap: 0;
         }
 
         &__column {
-            padding-left: 0;
+            padding-left: 70px;
+            display: flex;
         }
     }
 
@@ -286,8 +287,9 @@
         padding-top: 80px;
 
         &__wrapper {
+            padding-top: 0;
             grid-template-columns: 1fr;
-            row-gap: 40px;
+            row-gap: 0px;
         }
 
         &__column {
@@ -389,8 +391,8 @@
     }
 
     .promo {
-        background: url("../../../public/image/MainBackground.jpg") no-repeat
-            45% / cover;
+        background: url("../../../public/image/MainBackground-min-4.jpg")
+            no-repeat 30% / cover;
         &__btns {
             margin-top: 30px;
         }
@@ -412,13 +414,6 @@
     }
 
     .about {
-        // &__title {
-        //     @include before_circle;
-        //     &:before {
-        //         top: -3px;
-        //     }
-        // }
-
         &__wrapper {
             grid-template: 340px auto auto/1fr;
         }
@@ -426,7 +421,7 @@
         &__photo {
             grid-row: 1/3;
             background: url("../../../public/image/Blue.jpg") no-repeat
-                center/90%;
+                center/85%;
         }
 
         &__skills {
@@ -450,33 +445,23 @@
     .resume {
         padding-top: 60px;
 
-        .title {
-            line-height: 24px;
-        }
-
-        &__wrapper {
-            padding-top: 40px;
-            grid-template-columns: 1fr;
-            row-gap: 40px;
-        }
-
         &__column {
             padding-left: 0px;
 
-            &-title {
-                padding-left: 40px;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 100%;
-                    background-color: $main-color;
-                    left: -7px;
-                    top: 80%;
-                    transform: translateY(-50%);
-                }
-            }
+            // &-title {
+            //     padding-left: 40px;
+            //     // &::before {
+            //     //     content: "";
+            //     //     position: absolute;
+            //     //     width: 15px;
+            //     //     height: 15px;
+            //     //     border-radius: 100%;
+            //     //     background-color: $main-color;
+            //     //     left: -7px;
+            //     //     top: 80%;
+            //     //     transform: translateY(-50%);
+            //     // }
+            // }
 
             ul {
                 padding-left: 0;
@@ -488,28 +473,44 @@
                 }
             }
         }
+
+        &__item {
+            &-head {
+                padding: 30px 0 0 90px;
+            }
+            &-icon {
+                left: 25px;
+            }
+        }
     }
 
     .skills {
         padding-top: 60px;
 
         .title {
-            &__section {
-                &-title {
-                    font-size: 16px;
-                    line-height: 24px;
-                    &:before {
-                        top: -5px;
-                    }
-                }
-                &-subtitle {
-                    font-size: 24px;
-                    line-height: 36px;
-                }
+            &__fz36 {
+                font-size: 28px;
             }
+            &__fz14 {
+                padding-left: 10px;
+            }
+
+            // &__section {
+            //     &-title {
+            //         font-size: 16px;
+            //         line-height: 24px;
+            //         &:before {
+            //             top: -5px;
+            //         }
+            //     }
+            //     &-subtitle {
+            //         font-size: 24px;
+            //         line-height: 36px;
+            //     }
+            // }
         }
         &__items {
-            margin-top: 20px;
+            margin-top: 30px;
         }
         &__ratings {
             grid-template-columns: repeat(auto-fit, 300px);
@@ -519,9 +520,30 @@
 
     .portfolio {
         padding-top: 60px;
+        &__wrapper {
+            margin-top: 30px;
+        }
 
-        .title__section-subtitle {
-            line-height: 36px;
+        .title {
+            &__fz36 {
+                font-size: 28px;
+            }
+            &__fz14 {
+                padding-left: 10px;
+            }
+        }
+    }
+
+    .listQuestions {
+        padding-top: 60px;
+
+        .title {
+            &__fz36 {
+                font-size: 28px;
+            }
+            &__fz14 {
+                padding-left: 10px;
+            }
         }
     }
 

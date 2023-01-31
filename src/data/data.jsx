@@ -5,17 +5,17 @@ export const data = [
                 id: 1,
                 universityOrPosition: "МГЭИ им. Сахарова при БГУ",
                 aducationOrJob:
-                    "Высшее специальное образование | Биолог - аналитик | Минск (2014-2019)",
-                description:
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea libero sequi accusamus dicta nemo voluptatibus dolor sint ab nihil asperiores, excepturi dolores. Voluptas, doloremque fuga. Eum quis dolor nam?",
+                    "Высшее образование | Биолог - аналитик | Минск (2014-2019)",
+                // description:
+                //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea libero sequi accusamus dicta nemo voluptatibus dolor sint ab nihil asperiores, excepturi dolores. Voluptas, doloremque fuga. Eum quis dolor nam?",
                 img: "icons/resume/Vector.svg",
             },
             {
                 id: 2,
                 universityOrPosition: "Фитнес школа 'Адреналин'",
                 aducationOrJob: "Инструктор тренажерного зала | Минск (2016)",
-                description:
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea libero sequi accusamus dicta nemo voluptatibus dolor sint ab nihil asperiores, excepturi dolores. Voluptas, doloremque fuga. Eum quis dolor nam?",
+                // description:
+                // "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea libero sequi accusamus dicta nemo voluptatibus dolor sint ab nihil asperiores, excepturi dolores. Voluptas, doloremque fuga. Eum quis dolor nam?",
                 img: "icons/resume/Courses.svg",
             },
         ],
@@ -24,23 +24,23 @@ export const data = [
                 id: 3,
                 universityOrPosition: "Учебный центр «Фитнес образование»",
                 aducationOrJob: " Направление Stretching | Минск (2019)",
-                description:
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea libero sequi accusamus dicta nemo voluptatibus dolor sint ab nihil asperiores, excepturi dolores. Voluptas, doloremque fuga. Eum quis dolor nam?",
+                // description:
+                //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea libero sequi accusamus dicta nemo voluptatibus dolor sint ab nihil asperiores, excepturi dolores. Voluptas, doloremque fuga. Eum quis dolor nam?",
                 img: "icons/resume/Biceps.svg",
             },
             {
                 id: 4,
-                universityOrPosition: "Онлайн-тренинг",
-                aducationOrJob: ` Индивидуальные и групповые тренировки | (2020 - ${new Date().getFullYear()})`,
-                description:
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea libero sequi accusamus dicta nemo voluptatibus dolor sint ab nihil asperiores, excepturi dolores. Voluptas, doloremque fuga. Eum quis dolor nam?",
+                universityOrPosition: "Семинар от фитнес школы 'Адреналин'",
+                aducationOrJob: `  Тренировки во время беременности |Минск (2021)`,
+                // description:
+                //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea libero sequi accusamus dicta nemo voluptatibus dolor sint ab nihil asperiores, excepturi dolores. Voluptas, doloremque fuga. Eum quis dolor nam?",
                 img: "icons/resume/Online.svg",
             },
         ],
         aboutMe: [
             {
                 id: 5,
-                title: "Тренировки с беременными",
+                title: "Силовые тренировки",
                 description:
                     " Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ducimus laboriosam quia facere, ut suscipit ullam sapiente",
                 img: "icons/aboutMe/mother.svg",
@@ -54,7 +54,7 @@ export const data = [
             },
             {
                 id: 7,
-                title: "Правильное Питание",
+                title: "Развитие растяжки",
                 description:
                     " Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ducimus laboriosam quia facere, ut suscipit ullam sapiente",
                 img: "icons/aboutMe/PP.svg",
@@ -66,28 +66,28 @@ export const data = [
                 id: 8,
                 title: "9 тренировок ",
                 description:
-                    "Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта",
+                    "Я тренируюсь с вами! В процессе тренировок объясняю, как упростить или усложнить упражнение, поэтому в проекте могут участвовать девушки разной подготовки ",
                 img: "icons/skills/RedGirl.svg",
             },
             {
                 id: 9,
                 title: "Помощь в расчете кБЖУ",
                 description:
-                    "Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта",
+                    "Рассказываю, как правильно посчитать СВОЮ суточную калорийность, ЧТО и в каком количестве нужно есть, чтобы похудеть ",
                 img: "icons/skills/FreeGirl.svg",
             },
             {
                 id: 10,
                 title: "Меню на 21 день",
                 description:
-                    "Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта",
+                    "Девушки, у вас будет 2 варианта готовых меню : для тех, у кого нет времени на готовку и для тех, кому хочется чего-то поинтереснее. Всё расписано и рассчитано на 21 день",
                 img: "icons/skills/Stretching.svg",
             },
             {
                 id: 11,
                 title: "Общий чат с участниками и со мной",
                 description:
-                    "Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта",
+                    "У нас с вами будет общий чат в телеграм, где я буду отвечать на все вопросы",
                 img: "icons/skills/",
             },
         ],
@@ -102,20 +102,46 @@ export const data = [
         ],
 
         portfolio: [
-            { id: 20, href: "#", img: "image/portfolio/1.jpg", className: "" },
-            { id: 21, href: "#", img: "image/portfolio/2.jpg", className: "" },
-            { id: 22, href: "#", img: "image/portfolio/3.jpg", className: "" },
+            {
+                id: 20,
+                href: "#",
+                img: "image/portfolio/1.jpg",
+                img_min: "image/portfolio/1.jpg",
+                className: "",
+            },
+            {
+                id: 21,
+                href: "#",
+                img: "image/portfolio/2.jpg",
+                img_min: "image/portfolio/2.jpg",
+                className: "",
+            },
+            {
+                id: 22,
+                href: "#",
+                img: "image/portfolio/3.jpg",
+                img_min: "image/portfolio/3.jpg",
+                className: "",
+            },
             {
                 id: 23,
                 href: "#",
                 img: "image/portfolio/4.jpg",
+                img_min: "image/portfolio/4.jpg",
                 className: " vertical",
             },
-            { id: 24, href: "#", img: "image/portfolio/5.jpg", className: "" },
+            {
+                id: 24,
+                href: "#",
+                img: "image/portfolio/5.jpg",
+                img_min: "image/portfolio/5.jpg",
+                className: "",
+            },
             {
                 id: 25,
                 href: "#",
                 img: "image/portfolio/6.jpg",
+                img_min: "image/portfolio/6-min.jpg",
                 className: " horizontal",
             },
         ],

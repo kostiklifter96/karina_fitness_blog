@@ -16,9 +16,9 @@ export const Resume = () => {
 
                 <div className='resume__wrapper'>
                     <div className='resume__column'>
-                        <h3 className='title title__fz20 resume__column-title'>
+                        {/* <h3 className='title title__fz20 resume__column-title'>
                             Образование
-                        </h3>
+                        </h3> */}
                         <ul>
                             {data[0].firstColumn?.map((el) => (
                                 <ResumeItem key={el.id} {...el} />
@@ -26,9 +26,9 @@ export const Resume = () => {
                         </ul>
                     </div>
                     <div className='resume__column'>
-                        <h3 className='title title__fz20 resume__column-title'>
+                        {/* <h3 className='title title__fz20 resume__column-title'>
                             Опыт работы
-                        </h3>
+                        </h3> */}
                         <ul>
                             {data[0].secondColumn?.map((el) => (
                                 <ResumeItem key={el.id} {...el} />
