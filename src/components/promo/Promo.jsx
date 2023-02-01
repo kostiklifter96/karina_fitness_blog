@@ -15,7 +15,7 @@ export const Promo = ({ addActiveStyle }) => {
                     Я фитнес-тренер онлайн
                 </h1>
                 <div className='promo__btns'>
-                    <a href='#portfolio' className='promo__links-main btn'>
+                    <a href='#skills' className='promo__links-main btn'>
                         О проекте
                     </a>
                     <a href='#about' className='promo__links'>

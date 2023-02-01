@@ -33,19 +33,19 @@ export const Menu = ({ activeStyle, removeActiveStyle }) => {
                             className='menu__link'
                             onClick={() => removeActiveStyle()}
                         >
-                            <a href='#about'>ПРО МЕНЯ</a>
+                            <a href='#about'>ОБО МНЕ</a>
                         </li>
                         <li
                             className='menu__link'
                             onClick={() => removeActiveStyle()}
                         >
-                            <a href='#resume'>МОЙ ОПЫТ</a>
+                            <a href='#resume'>ОБРАЗОВАНИЕ</a>
                         </li>
                         <li
                             className='menu__link'
                             onClick={() => removeActiveStyle()}
                         >
-                            <a href='#skills'>МОИ НАВЫКИ</a>
+                            <a href='#skills'>NAUMOVA_TEAM</a>
                         </li>
                         <li
                             className='menu__link'
