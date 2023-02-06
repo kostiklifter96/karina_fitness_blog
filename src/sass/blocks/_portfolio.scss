@@ -19,19 +19,18 @@
                 transform: scale(1.1);
                 filter: drop-shadow(0 0 10px $main-color);
             }
-        }
-
-        .vertical {
-            grid-row: 1/3;
-            grid-column: 4/5;
-            width: 280px;
-            height: 565px;
-        }
-        .horizontal {
-            grid-column: 2/4;
-            grid-row: 2/3;
-            width: 565px;
-            height: 280px;
+            .vertical {
+                grid-row: 1/3;
+                grid-column: 4/5;
+                width: 280px;
+                height: 565px;
+            }
+            .horizontal {
+                grid-column: 2/4;
+                grid-row: 2/3;
+                width: 565px;
+                height: 280px;
+            }
         }
     }
 }

@@ -8,7 +8,7 @@ export const Portfolio = () => {
                     Портфолио
                 </h2> */}
                 <div className='title title__fz36 title__section-subtitle'>
-                    Мои работы
+                    До/После
                 </div>
                 <div className='divider'></div>
 

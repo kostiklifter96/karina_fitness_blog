@@ -24,11 +24,15 @@ export const AboutMe = () => {
                             единомышленниц со всего мира.
                         </p>
                     </div>
-
-                    <div className='about__skills'>
-                        {data[0].aboutMe?.map((item) => (
-                            <AboutMeItem key={item.id} {...item} />
-                        ))}
+                    <div className='about__skills-list'>
+                        <div className=' about__skills-title title title__fz20  '>
+                            <p>Мои направления:</p>
+                        </div>
+                        <div className='about__skills'>
+                            {data[0].aboutMe?.map((item) => (
+                                <AboutMeItem key={item.id} {...item} />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

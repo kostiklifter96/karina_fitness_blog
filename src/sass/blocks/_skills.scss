@@ -11,8 +11,9 @@
         margin-top: 30px;
         padding: 0 10px;
         display: grid;
-        grid-template: repeat(1, minmax(210px, auto)) / repeat(4, 270px);
+        grid-template: repeat(1, minmax(210px, auto)) / repeat(3, 270px);
         gap: 13px;
+        justify-content: center;
     }
     &__item {
         border: 1px solid black;

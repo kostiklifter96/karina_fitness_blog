@@ -51,7 +51,7 @@ export const Menu = ({ activeStyle, removeActiveStyle }) => {
                             className='menu__link'
                             onClick={() => removeActiveStyle()}
                         >
-                            <a href='#portfolio'>МОИ РАБОТЫ</a>
+                            <a href='#portfolio'>До/После</a>
                         </li>
                         <li
                             className='menu__link'

@@ -12,7 +12,7 @@ export const data = [
             },
             {
                 id: 2,
-                universityOrPosition: "Фитнес школа 'Адреналин'",
+                universityOrPosition: "Фитнес-школа 'Адреналин'",
                 aducationOrJob: "Инструктор тренажерного зала | Минск (2016)",
                 // description:
                 // "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea libero sequi accusamus dicta nemo voluptatibus dolor sint ab nihil asperiores, excepturi dolores. Voluptas, doloremque fuga. Eum quis dolor nam?",
@@ -30,7 +30,7 @@ export const data = [
             },
             {
                 id: 4,
-                universityOrPosition: "Семинар от фитнес школы 'Адреналин'",
+                universityOrPosition: "Семинар от фитнес-школы 'Адреналин'",
                 aducationOrJob: `  Тренировки во время беременности |Минск (2021)`,
                 // description:
                 //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea libero sequi accusamus dicta nemo voluptatibus dolor sint ab nihil asperiores, excepturi dolores. Voluptas, doloremque fuga. Eum quis dolor nam?",
@@ -54,7 +54,7 @@ export const data = [
             },
             {
                 id: 7,
-                title: "Развитие растяжки",
+                title: "Stretching",
                 description:
                     " Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ducimus laboriosam quia facere, ut suscipit ullam sapiente",
                 img: "icons/aboutMe/PP.svg",
@@ -83,13 +83,6 @@ export const data = [
                     "Девушки, у вас будет 2 варианта готовых меню : для тех, у кого нет времени на готовку и для тех, кому хочется чего-то поинтереснее. Всё расписано и рассчитано на 21 день",
                 img: "icons/skills/Stretching.svg",
             },
-            {
-                id: 11,
-                title: "Общий чат с участниками и со мной",
-                description:
-                    "У нас с вами будет общий чат в телеграм, где я буду отвечать на все вопросы",
-                img: "icons/skills/",
-            },
         ],
 
         level: [
@@ -105,44 +98,38 @@ export const data = [
             {
                 id: 20,
                 href: "#",
-                img: "image/portfolio/1.jpg",
-                img_min: "image/portfolio/1.jpg",
+                img: ["image/portfolio/1.jpg", "image/portfolio/1.jpg"],
                 className: "",
             },
             {
                 id: 21,
                 href: "#",
-                img: "image/portfolio/2.jpg",
-                img_min: "image/portfolio/2.jpg",
+                img: ["image/portfolio/2.jpg", "image/portfolio/2.jpg"],
                 className: "",
             },
             {
                 id: 22,
                 href: "#",
-                img: "image/portfolio/3.jpg",
-                img_min: "image/portfolio/3.jpg",
+                img: ["image/portfolio/3.jpg", "image/portfolio/3.jpg"],
                 className: "",
             },
             {
                 id: 23,
                 href: "#",
-                img: "image/portfolio/4.jpg",
-                img_min: "image/portfolio/4.jpg",
+                img: ["image/portfolio/4.jpg", "image/portfolio/4.jpg"],
                 className: " vertical",
             },
             {
                 id: 24,
                 href: "#",
-                img: "image/portfolio/5.jpg",
-                img_min: "image/portfolio/5.jpg",
+                img: ["image/portfolio/5.jpg", "image/portfolio/5.jpg"],
                 className: "",
             },
             {
                 id: 25,
                 href: "#",
-                img: "image/portfolio/6.jpg",
-                img_min: "image/portfolio/6-min.jpg",
-                className: " horizontal",
+                img: ["image/portfolio/6.jpg", "image/portfolio/6-min.jpg"],
+                className: "horizontal",
             },
         ],
 

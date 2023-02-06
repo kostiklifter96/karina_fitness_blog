@@ -27,7 +27,7 @@ export const Contacts = () => {
                 <div className='container'>
                     <div className='contacts__wrapper'>
                         <div className='contacts__photo'>
-                            <img src='image/Blue.jpg' alt='naumova' />
+                            <img src='image/Blue-w.webp' alt='naumova' />
                         </div>
 
                         <div className='contacts__description'>
