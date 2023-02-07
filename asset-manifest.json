@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/karina_fitness_blog/static/css/main.786e260b.css",
-    "main.js": "/karina_fitness_blog/static/js/main.cc288ca4.js",
+    "main.css": "/karina_fitness_blog/static/css/main.58f1cda4.css",
+    "main.js": "/karina_fitness_blog/static/js/main.f781aad2.js",
     "static/media/Blue-w.webp": "/karina_fitness_blog/static/media/Blue-w.7e42304d85dc5f2012e8.webp",
     "static/media/MainBackground-min-4a.jpg": "/karina_fitness_blog/static/media/MainBackground-min-4a.3eb3a89fb1695622cc5b.jpg",
     "static/media/MainBackground-min.jpg": "/karina_fitness_blog/static/media/MainBackground-min.325b2f6c8105c9c13bd3.jpg",
     "index.html": "/karina_fitness_blog/index.html",
-    "main.786e260b.css.map": "/karina_fitness_blog/static/css/main.786e260b.css.map",
-    "main.cc288ca4.js.map": "/karina_fitness_blog/static/js/main.cc288ca4.js.map"
+    "main.58f1cda4.css.map": "/karina_fitness_blog/static/css/main.58f1cda4.css.map",
+    "main.f781aad2.js.map": "/karina_fitness_blog/static/js/main.f781aad2.js.map"
   },
   "entrypoints": [
-    "static/css/main.786e260b.css",
-    "static/js/main.cc288ca4.js"
+    "static/css/main.58f1cda4.css",
+    "static/js/main.f781aad2.js"
   ]
 }
