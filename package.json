@@ -1,6 +1,7 @@
 {
     "name": "naumova-project",
     "version": "0.1.0",
+    "homepage": "https://kostiklifter96.github.io/karina_fitness_blog/",
     "private": true,
     "dependencies": {
         "@emailjs/browser": "^3.10.0",
