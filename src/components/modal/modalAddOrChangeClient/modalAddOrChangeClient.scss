@@ -1,0 +1,67 @@
+.addClient {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__section {
+        background: rgb(41, 8, 65);
+        border: 1px solid rgba(242, 239, 239, 0.345);
+        border-radius: 5px;
+        padding: 5px 10px 30px 10px;
+        margin: 0 20px;
+        letter-spacing: 2px;
+
+        &-title {
+            color: skyblue;
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+            padding: 10px;
+        }
+    }
+
+    &__form {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: minmax(280px, 390px);
+        grid-template-rows: 40px 40px 90px 40px 40px 40px 40px 90px 50px;
+        justify-content: center;
+
+        & > input {
+            border: 3px solid black;
+            border-radius: 5px;
+            padding: 0 10px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: skyblue;
+            background: rgb(95, 30, 141);
+        }
+
+        & > textarea {
+            border: 3px solid black;
+            border-radius: 5px;
+            padding: 0 10px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: skyblue;
+            background: rgb(95, 30, 141);
+        }
+        & > button {
+            border: 3px solid black;
+            border-radius: 5px;
+            background: rgba(137, 4, 226, 0.822);
+            color: skyblue;
+            font-size: 17px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+    }
+}
+
+.change {
+    grid-template-rows: 40px 40px 100px 40px 40px 40px 40px 50px !important;
+}

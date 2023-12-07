@@ -1,0 +1,172 @@
+.admin {
+    display: grid;
+    justify-content: center;
+    background: rgb(13, 1, 35);
+    min-height: 100vh;
+    grid-template-columns: minmax(310px, 600px);
+    grid-template-rows: 50px 30px;
+    gap: 25px;
+    padding: 0 15px;
+
+    &-head {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 5px 0 5px;
+        letter-spacing: 1px;
+        color: skyblue;
+
+        &__logo {
+            font-size: 50px;
+            font-weight: bold;
+        }
+        &__exit {
+            font-size: 18px;
+            font-weight: bold;
+            &:hover {
+                color: rgba(181, 13, 13, 0.853);
+            }
+        }
+    }
+
+    &-control {
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 60px;
+        gap: 15px;
+        color: skyblue;
+
+        &__btnControl {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            text-align: center;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+            border: 2px solid skyblue;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background: rgb(50, 3, 74);
+            }
+        }
+    }
+
+    &-clientList {
+        margin-top: 40px;
+        border-radius: 5px;
+        color: rgb(137, 181, 199);
+        letter-spacing: 1px;
+
+        &__participants {
+            margin: 5px 5px 20px 5px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            // gap: 5px;
+
+            span {
+                padding-right: 3px;
+                // margin-bottom: 5px;
+            }
+
+            &-full {
+                margin-bottom: 5px;
+            }
+
+            &-select {
+                background: rgb(13, 1, 35);
+                border: 1px solid skyblue;
+                border-radius: 5px;
+                color: rgb(137, 181, 199);
+                margin-bottom: 5px;
+            }
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 17px;
+            color: rgb(192, 232, 248);
+        }
+
+        &__item {
+            border: 1px solid skyblue;
+            border-radius: 5px;
+
+            margin: 0 5px 5px 5px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            font-size: 16px;
+
+            &-buttons {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 5px;
+                padding: 2px;
+
+                button {
+                    border-radius: 5px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    background: rgba(110, 125, 233, 0.8);
+                    display: block;
+                }
+
+                button:first-child {
+                    background: rgba(171, 219, 49, 0.8);
+                }
+                button:last-child {
+                    background: rgba(181, 13, 13, 0.853);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 610px) {
+    .admin {
+        &-clientList {
+            &__participants {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .admin {
+        &-control {
+            grid-template-rows: 75px;
+            &__btnControl {
+                font-size: 14px;
+            }
+        }
+
+        &-head {
+            &__logo {
+                font-size: 33px;
+                font-weight: bold;
+            }
+            &__exit {
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+        &-clientList {
+            &__item {
+                &-buttons {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(4, 45px);
+                    button {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,213 @@
+@import "../../../sass/base/variables";
+@import "../../../sass/base/mixins";
+
+.resume {
+    padding-top: 120px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 15px;
+        padding-bottom: 0;
+    }
+
+    &__wrapper {
+        padding: 0px 5px 0 5px;
+        display: grid;
+        grid-template-columns: 1fr;
+        // column-gap: 135px;
+        justify-content: center;
+    }
+
+    &__column {
+        &-title {
+            position: relative;
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+            }
+        }
+    }
+    &__item {
+        position: relative;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        &-head {
+            position: relative;
+            padding: 30px 0 0 40px;
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+
+        &-body {
+            padding-left: 43px;
+            margin-top: 12px;
+            font-size: 18px;
+            line-height: 18px;
+        }
+        &-icon {
+            position: absolute;
+            top: 22px;
+            left: 43px;
+            @include before_circle;
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: -27%;
+                left: -50px;
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background: $main-color;
+            }
+
+            img {
+                position: absolute;
+                left: 15px;
+                top: 5px;
+            }
+        }
+        &-location {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 18px;
+            margin-top: -9px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .resume {
+        &__wrapper {
+            // grid-template-columns: repeat(2, 1fr);
+            row-gap: 40px;
+        }
+
+        &__column {
+            padding-left: 0;
+        }
+        &__item {
+            &-icon {
+                top: 21px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .resume {
+        padding-top: 90px;
+
+        &__wrapper {
+            padding-top: 0;
+
+            grid-template-columns: 1fr;
+            row-gap: 10px;
+        }
+
+        &__column {
+            padding-left: 70px;
+            display: flex;
+        }
+
+        &__item {
+            &-icon {
+                top: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .resume {
+        padding-top: 90px;
+
+        &__wrapper {
+            padding-top: 0;
+            grid-template-columns: 1fr;
+            row-gap: 0px;
+        }
+
+        &__column {
+            padding-left: 0;
+        }
+
+        &__item {
+            // margin-bottom: 20px;
+            &-icon {
+                top: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .resume {
+        padding-top: 70px;
+
+        // &__wrapper {
+        //     grid-template-columns: 300px;
+        // }
+
+        &__column {
+            padding-left: 0px;
+
+            ul {
+                padding-left: 0;
+                li {
+                    &:after {
+                        content: "";
+                        top: 2px;
+                    }
+                }
+            }
+        }
+
+        &__item {
+            // padding: 0 18px;
+            // margin-bottom: 40px;
+
+            &-head {
+                padding: 30px 0 0 40px;
+            }
+
+            &-icon {
+                top: 25px;
+                left: 30px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    top: -27%;
+                    left: -25px;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 100%;
+                    background: $main-color;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 435px) {
+}
+
+@media (max-width: 360px) {
+}
+
+// @media (max-width: 348px) {
+//     .resume {
+//         &__item {
+//             padding: 0 16px;
+//             margin-bottom: 75px;
+//         }
+//     }
+// }

@@ -1,0 +1,48 @@
+.marquee {
+    display: grid;
+    grid-template-rows: minmax(25px, auto);
+    align-items: center;
+    font-weight: bold;
+    white-space: break-spaces;
+}
+
+.marq__block {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+
+    & div {
+        background: rgb(236, 201, 26);
+        width: 200px;
+        height: 100px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-right: 265px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 992px) {
+    .marq__block {
+        & div {
+            margin-right: 170px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .marq__block {
+        & div {
+            margin-right: 120px;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .marq__block {
+        & div {
+            margin-right: 50px;
+        }
+    }
+}

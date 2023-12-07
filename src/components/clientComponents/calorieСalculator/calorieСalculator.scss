@@ -1,0 +1,205 @@
+@import "../../../sass/base/variables";
+@import "../../../sass/base/mixins";
+
+.calorieСalculator {
+    padding-top: 100px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    &__grid {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(4, 150px);
+        justify-content: center;
+
+        &-result {
+            margin-bottom: 15px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: 200px;
+            grid-template-rows: 40px 20px;
+            gap: 10px;
+
+            &-number {
+                text-align: center;
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+            &-description {
+                text-align: center;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+
+        &-item {
+            display: grid;
+            justify-content: center;
+            text-align: center;
+            grid-template-rows: 30px 40px;
+            &-num {
+                display: block;
+                margin: 0 auto;
+                width: 140px;
+                font-size: 13px;
+                font-weight: bold;
+            }
+
+            &-description {
+                font-weight: bold;
+            }
+
+            input {
+                padding: 3px 5px;
+                border: 2px solid $primary-color;
+                border-radius: 5px;
+                text-align: center;
+                font-size: 15px;
+
+                cursor: pointer;
+            }
+
+            select {
+                border: 2px solid $primary-color;
+                border-radius: 5px;
+                padding: 3px 5px;
+                font-size: 15px;
+                // font-weight: bold;
+            }
+        }
+    }
+
+    &__column {
+        &-title {
+            position: relative;
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+            }
+        }
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        position: relative;
+        height: 40px;
+        margin-bottom: 20px;
+
+        &-head {
+            position: relative;
+            padding: 30px 0 0 30px;
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            top: 23px;
+            left: 43px;
+            @include before_circle;
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: -27%;
+                left: -50px;
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background: $main-color;
+            }
+
+            img {
+                position: absolute;
+                left: 15px;
+                top: 5px;
+            }
+        }
+        &-location {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 18px;
+            margin-top: -9px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .calorieСalculator {
+        padding-top: 70px;
+
+        &__grid {
+            grid-template-columns: repeat(4, 150px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .calorieСalculator {
+        &__grid {
+            grid-template-columns: repeat(4, 150px);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .calorieСalculator {
+        &__grid {
+            grid-template-columns: 1fr;
+
+            &-item {
+                font-size: 18px;
+                &-num {
+                    width: 210px;
+                }
+            }
+
+            &-result {
+                margin: 30px 0;
+                gap: 15px;
+
+                &-description {
+                    font-size: 18px;
+                }
+
+                &-number {
+                    font-size: 45px;
+                }
+            }
+        }
+
+        &__item {
+            position: relative;
+            height: 40px;
+            margin-bottom: 40px;
+
+            &-icon {
+                position: absolute;
+                top: 25px;
+                left: 43px;
+                @include before_circle;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    top: -27%;
+                    left: -50px;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 100%;
+                    background: $main-color;
+                }
+            }
+        }
+    }
+}

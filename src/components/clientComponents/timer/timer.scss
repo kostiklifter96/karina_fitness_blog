@@ -1,0 +1,70 @@
+@import "../../../sass/base/variables";
+@import "../../../sass/base/mixins";
+
+.timer {
+    padding-top: 80px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 150px);
+        justify-content: center;
+
+        &-item {
+            text-align: center;
+            &-num {
+                font-size: 45px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .timer {
+        &__grid {
+            grid-template-columns: repeat(4, 120px);
+
+            &-item {
+                &-num {
+                    font-size: 45px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .timer {
+        &__grid {
+            grid-template-columns: repeat(4, 100px);
+
+            &-item {
+                &-num {
+                    font-size: 45px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .timer {
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 70px);
+            justify-content: center;
+
+            &-item {
+                text-align: center;
+                &-num {
+                    font-size: 35px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

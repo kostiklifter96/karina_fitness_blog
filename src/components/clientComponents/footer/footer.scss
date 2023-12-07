@@ -1,0 +1,40 @@
+@import "../../../sass/base/variables";
+@import "../../../sass/base/mixins";
+.footer {
+    min-height: 80px;
+    background: rgb(11, 11, 11);
+    display: flex;
+    align-items: center;
+    color: rgb(200, 197, 197);
+
+    &__nav {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 25px;
+    }
+
+    &__payment img {
+        width: 99%;
+    }
+}
+
+@media (max-width: 445px) {
+    .footer {
+        &__nav {
+            font-size: 9.9px;
+            line-height: 18px;
+        }
+    }
+}
+
+@media (max-width: 345px) {
+    .footer {
+        &__nav {
+            font-size: 9.3px;
+        }
+    }
+}

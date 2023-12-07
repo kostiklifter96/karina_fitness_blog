@@ -1,0 +1,81 @@
+@import "../../../sass/base/variables";
+@import "../../../sass/base/mixins";
+
+.listQuestions {
+    padding-top: 120px;
+
+    &__items {
+        margin-top: 20px;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    &__item {
+        padding: 8px;
+        margin-bottom: 4px;
+        // border-bottom: 1px solid $primary-color;
+        &-title {
+            font-size: 17px;
+            font-weight: bold;
+            width: 95%;
+        }
+
+        &-questions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+
+            &-arrow {
+                padding-left: 15px;
+                transform: rotate(0);
+                transition: all 700ms;
+            }
+
+            &.active__arrow {
+                transform: rotate(-90deg);
+                transition: all 700ms;
+            }
+        }
+
+        &-description {
+            max-height: 0;
+            overflow: hidden;
+            transition-duration: 300ms;
+        }
+
+        &.active__description {
+            max-height: 13rem;
+            overflow-y: hidden;
+            transition-duration: 300ms;
+            border-bottom: none;
+
+            p {
+                padding: 2px 0;
+                font-weight: 500;
+            }
+        }
+
+        .border {
+            margin-top: 1px auto;
+            width: 98%;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+    .listQuestions {
+        padding-top: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+}
