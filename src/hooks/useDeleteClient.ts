@@ -25,8 +25,6 @@ export const useDeleteClient = () => {
             setLoading(false);
             alert(`status: Клиент удалён`);
 
-            console.log(data);
-
             return data;
         } catch (error) {
             if (error instanceof Error) {

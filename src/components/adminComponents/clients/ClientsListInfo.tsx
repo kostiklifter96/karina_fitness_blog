@@ -1,18 +1,25 @@
 import { useEffect } from "react";
 import {
+    filterClientListByPaymentTime,
+    filterClientListByStatusPayment,
     filterClientListByThreads,
-    filterClientListByTimeType,
-    getNumberOfThreads,
+    getNumberOfThreadsForSelectList,
 } from "store/reducer/clientReducer";
 import { useAppDispatch, useAppSelector } from "store/store";
 
 export const ClientsListInfo = () => {
     const dispatch = useAppDispatch();
-    const { sortByTime, filterClientList, clientList, numberOfThreads } =
-        useAppSelector((state) => state.client);
+
+    const {
+        sortByPaymentTime,
+        statusPayment,
+        filterClientList,
+        clientList,
+        numberOfThreads,
+    } = useAppSelector((state) => state.client);
 
     useEffect(() => {
-        dispatch(getNumberOfThreads(""));
+        dispatch(getNumberOfThreadsForSelectList(""));
         dispatch(filterClientListByThreads(-1));
     }, [dispatch]);
 
@@ -65,12 +72,18 @@ export const ClientsListInfo = () => {
                         <span>Оплата: </span>{" "}
                         <select
                             className=' admin-clientList__participants-select'
-                            onChange={() => {}}
-                            value={""}
+                            onChange={(e) => {
+                                dispatch(
+                                    filterClientListByStatusPayment(
+                                        +e.target.value,
+                                    ),
+                                );
+                            }}
+                            value={statusPayment}
                         >
-                            <option value={"all"}>Все</option>
-                            <option value={"paid"}>Оплаченные</option>
-                            <option value={"notPaid"}>Не оплаченные</option>
+                            <option value={-1}>Все</option>
+                            <option value={1}>Оплаченные</option>
+                            <option value={0}>Не оплаченные</option>
                         </select>
                     </div>
                     <div className='admin-clientList__participants-paid'>
@@ -79,10 +92,12 @@ export const ClientsListInfo = () => {
                             className=' admin-clientList__participants-select'
                             onChange={(e) =>
                                 dispatch(
-                                    filterClientListByTimeType(e.target.value),
+                                    filterClientListByPaymentTime(
+                                        e.target.value,
+                                    ),
                                 )
                             }
-                            value={sortByTime}
+                            value={sortByPaymentTime}
                         >
                             <option value={"old"}>Сначала старые</option>
                             <option value={"new"}>Сначала новые</option>

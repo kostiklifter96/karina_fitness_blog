@@ -4,17 +4,21 @@ import { IClient } from "types/types";
 interface IInitialStateAdmin {
     clientList: IClient[];
     filterClientList: IClient[];
+    stream: number;
     clientFullInfoFromList: IClient | null;
     clientEmailFromList: string;
     personalPaymentUrl: string;
-    sortByTime: string;
+    sortByPaymentTime: string;
+    statusPayment: number;
     numberOfThreads: number[];
 }
 
 const initialState: IInitialStateAdmin = {
     clientList: [],
     filterClientList: [],
-    sortByTime: "old",
+    stream: -1,
+    sortByPaymentTime: "old",
+    statusPayment: -1,
     clientFullInfoFromList: null,
     clientEmailFromList: "",
     personalPaymentUrl: "",
@@ -30,17 +34,66 @@ export const clientReducer = createSlice({
         },
 
         filterClientListByThreads: (state, action) => {
+            state.stream = action.payload;
+            state.statusPayment = -1;
+
             if (action.payload === -1) {
-                state.filterClientList = [...state.clientList];
+                state.sortByPaymentTime === "old"
+                    ? (state.filterClientList = [...state.clientList])
+                    : (state.filterClientList = [
+                          ...state.clientList,
+                      ].reverse());
                 return;
             }
-            state.filterClientList = [...state.clientList].filter(
-                (el) => el.stream === action.payload,
-            );
+
+            state.sortByPaymentTime === "old"
+                ? (state.filterClientList = [...state.clientList].filter(
+                      (el) => el.stream === action.payload,
+                  ))
+                : (state.filterClientList = [...state.clientList]
+                      .reverse()
+                      .filter((el) => el.stream === action.payload));
         },
 
-        filterClientListByTimeType: (state, action) => {
-            state.sortByTime = action.payload;
+        filterClientListByStatusPayment: (state, action) => {
+            state.statusPayment = action.payload;
+
+            if (action.payload === -1) {
+                if (state.stream === -1) {
+                    state.filterClientList = [...state.clientList];
+                    return;
+                } else {
+                    state.filterClientList = [...state.clientList].filter(
+                        (el) => el.stream === state.stream,
+                    );
+                    return;
+                }
+            }
+
+            state.filterClientList = [...state.clientList].filter((el) => {
+                if (el.paymentStatus === action.payload) {
+                    if (el.stream === state.stream) {
+                        return el;
+                    }
+                    if (state.stream === -1) {
+                        return el;
+                    }
+                }
+            });
+        },
+
+        filterClientListByPaymentTime: (state, action) => {
+            state.sortByPaymentTime = action.payload;
+            if (action.payload === "new") {
+                state.filterClientList.reverse();
+            }
+            if (action.payload === "old") {
+                state.filterClientList.reverse();
+            }
+        },
+
+        getNumberOfStream: (state, action) => {
+            state.stream = action.payload;
         },
 
         getClientFullInfoFromList: (state, action) => {
@@ -59,7 +112,7 @@ export const clientReducer = createSlice({
             state.clientList = action.payload;
         },
 
-        getNumberOfThreads: (state, action) => {
+        getNumberOfThreadsForSelectList: (state, action) => {
             const threads: number[] = [];
             state.clientList.forEach((el) => {
                 threads.push(el.stream);
@@ -68,14 +121,30 @@ export const clientReducer = createSlice({
         },
 
         addClientFromFront: (state, action) => {
-            // state.clientList.push(action.payload);
-            state.filterClientList.push(action.payload);
+            if (state.sortByPaymentTime === "old") {
+                state.clientList.push(action.payload);
+                state.filterClientList.push(action.payload);
+            } else {
+                state.clientList.unshift(action.payload);
+                state.filterClientList.unshift(action.payload);
+            }
         },
 
         deleteClientFromFront: (state, action) => {
-            state.filterClientList = state.clientList.filter(
+            state.clientList = [...state.clientList].filter(
                 (el) => el.id !== action.payload,
             );
+
+            if (state.sortByPaymentTime === "old") {
+                state.filterClientList = [...state.clientList].filter(
+                    (el) => el.id !== action.payload,
+                );
+            } else {
+                state.filterClientList = [...state.clientList]
+                    .filter((el) => el.id !== action.payload)
+                    .reverse();
+            }
+
             state.clientList = state.clientList.filter(
                 (el) => el.id !== action.payload,
             );
@@ -97,12 +166,14 @@ export const {
     getAllClientsFromDataBase,
     getClientFullInfoFromList,
     getClientEmailFromList,
+    getNumberOfStream,
     createPersonalPaymentUrl,
     addClientFromFront,
     deleteClientFromFront,
     loadAllClients,
     updateClientFromFront,
     filterClientListByThreads,
-    filterClientListByTimeType,
-    getNumberOfThreads,
+    filterClientListByPaymentTime,
+    filterClientListByStatusPayment,
+    getNumberOfThreadsForSelectList,
 } = clientReducer.actions;

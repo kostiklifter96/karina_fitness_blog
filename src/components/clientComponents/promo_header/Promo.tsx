@@ -55,23 +55,24 @@ export const Promo = ({ addActiveStyle }: IPromoHeader) => {
                     </a>
                 </div>
                 <div className='title title__fz16 promo__subtitle'>
-                    11.12 - 24.12
+                    {/* 11.12 - 24.12 */}
                 </div>
                 <h1 className='title title__fz48 promo__title'>Naumova_team</h1>
 
                 <div className='promo__btns'>
                     <a
-                        href={linkUrl}
+                        // href={linkUrl}
                         target='_blank'
                         className='promo__links-main btn'
                         rel='noreferrer'
                     >
-                        Присоединиться за{" "}
+                        {/* Присоединиться за{" "}
                         {String(process.env.REACT_APP_GENERAL_PRICE).substring(
                             0,
                             2,
                         )}{" "}
-                        BYN
+                        BYN */}
+                        Регистрация закрыта
                     </a>
 
                     {/* <a href='#about' className='promo__links'>

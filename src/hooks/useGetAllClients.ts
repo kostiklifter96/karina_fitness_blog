@@ -6,7 +6,6 @@ import { IResponse } from "types/types";
 export const useGetAllClients = () => {
     const [loading, setLoading] = useState(false);
     const dispatch = useAppDispatch();
-    // const [clients, setClients] = useState<IClient[]>([]);
 
     const getAllClients = async () => {
         try {

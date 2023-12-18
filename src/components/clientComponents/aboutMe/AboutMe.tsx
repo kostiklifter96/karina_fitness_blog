@@ -59,7 +59,7 @@ export const AboutMe = () => {
                         </MarqueeComponent>{" "}
                     </div>
 
-                    <div className='about__btn'>
+                    {/* <div className='about__btn'>
                         <a
                             href={linkUrl}
                             className='btn'
@@ -68,7 +68,7 @@ export const AboutMe = () => {
                         >
                             Хочу красивое тело
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

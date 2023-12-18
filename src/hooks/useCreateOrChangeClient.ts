@@ -40,7 +40,7 @@ export const useCreateOrChangeClient = () => {
             textForMailer
         ) {
             const dataCreateClient: ICreateClient = {
-                email: email.toLowerCase(),
+                email: email.toLowerCase().trim(),
                 name,
                 textarea,
                 uid,
@@ -112,7 +112,7 @@ export const useCreateOrChangeClient = () => {
         ) {
             const dataChangeClient = {
                 id: clientId,
-                email,
+                email: email.toLowerCase().trim(),
                 name,
                 textarea,
                 uid,

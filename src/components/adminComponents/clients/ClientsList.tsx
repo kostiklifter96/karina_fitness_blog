@@ -9,47 +9,25 @@ export const ClientsList = ({
     handlerModalCreatePayment,
     loading,
 }: IClientList) => {
-    const { sortByTime, filterClientList } = useAppSelector(
-        (state) => state.client,
-    );
+    const { filterClientList } = useAppSelector((state) => state.client);
 
     return (
         <>
-            {sortByTime === "old"
-                ? filterClientList.map((el) => (
-                      <ClientsListItem
-                          key={el.id}
-                          client={el}
-                          handlerModalSendEmailForPersonally={
-                              handlerModalSendEmailForPersonally
-                          }
-                          handlerModalChangeClientForPersonally={
-                              handlerModalChangeClientForPersonally
-                          }
-                          handleDeleteClient={handleDeleteClient}
-                          handlerModalCreatePayment={handlerModalCreatePayment}
-                          loading={loading}
-                      />
-                  ))
-                : filterClientList
-                      .map((el) => (
-                          <ClientsListItem
-                              key={el.id}
-                              client={el}
-                              handlerModalSendEmailForPersonally={
-                                  handlerModalSendEmailForPersonally
-                              }
-                              handlerModalChangeClientForPersonally={
-                                  handlerModalChangeClientForPersonally
-                              }
-                              handleDeleteClient={handleDeleteClient}
-                              handlerModalCreatePayment={
-                                  handlerModalCreatePayment
-                              }
-                              loading={loading}
-                          />
-                      ))
-                      .reverse()}
+            {filterClientList.map((el) => (
+                <ClientsListItem
+                    key={el.id}
+                    client={el}
+                    handlerModalSendEmailForPersonally={
+                        handlerModalSendEmailForPersonally
+                    }
+                    handlerModalChangeClientForPersonally={
+                        handlerModalChangeClientForPersonally
+                    }
+                    handleDeleteClient={handleDeleteClient}
+                    handlerModalCreatePayment={handlerModalCreatePayment}
+                    loading={loading}
+                />
+            ))}
         </>
     );
 };

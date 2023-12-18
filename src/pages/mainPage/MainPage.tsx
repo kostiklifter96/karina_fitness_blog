@@ -10,7 +10,6 @@ import {
     Program,
     Promo,
     Resume,
-    Timer,
 } from "components/index";
 import { useTouch } from "hooks/useTouch";
 
@@ -31,7 +30,7 @@ export const MainPage = () => {
             />
             <Aside />
             <Promo addActiveStyle={addActiveStyle} />
-            <Timer />
+            {/* <Timer /> */}
             <AboutMe />
             <Program />
             <Resume />

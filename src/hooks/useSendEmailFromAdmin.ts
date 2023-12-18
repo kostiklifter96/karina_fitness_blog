@@ -22,15 +22,15 @@ export const useSendEmailFromAdmin = () => {
         }
 
         const dataSendEmail = {
-            email,
+            email: email.toLowerCase().trim(),
             text,
         };
 
         try {
             setLoading(true);
             const res = await fetch(
-                `${process.env.REACT_APP_BACKEND_PROD}sendEmail?apikey=${process.env.REACT_APP_API_KEY}`,
-                // `http://localhost:4999/sendEmail?apikey=${process.env.REACT_APP_API_KEY}`,
+                // `${process.env.REACT_APP_BACKEND_PROD}sendEmail?apikey=${process.env.REACT_APP_API_KEY}`,
+                `http://localhost:4999/sendEmail?apikey=${process.env.REACT_APP_API_KEY}`,
 
                 {
                     method: "POST",

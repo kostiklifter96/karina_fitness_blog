@@ -25,7 +25,7 @@ export const useSendForm = () => {
 
         const sendInfo = {
             name: e.currentTarget.name?.value,
-            email: e.currentTarget.email?.value,
+            email: e.currentTarget.email?.value.toLowerCase().trim(),
             textarea: e.currentTarget.textarea?.value,
         };
 
@@ -33,8 +33,8 @@ export const useSendForm = () => {
 
         try {
             await fetch(
-                `${process.env.REACT_APP_BACKEND_PROD}register?apikey=${process.env.REACT_APP_API_KEY}`,
-                // `http://localhost:4999/register?apikey=${process.env.REACT_APP_API_KEY}`,
+                // `${process.env.REACT_APP_BACKEND_PROD}register?apikey=${process.env.REACT_APP_API_KEY}`,
+                `http://localhost:4999/register?apikey=${process.env.REACT_APP_API_KEY}`,
                 {
                     method: "POST",
                     headers: {
