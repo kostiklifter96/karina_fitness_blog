@@ -9,6 +9,7 @@ import {
     Portfolio,
     Program,
     Promo,
+    PromoTraining,
     Resume,
 } from "components/index";
 import { useTouch } from "hooks/useTouch";
@@ -35,6 +36,7 @@ export const MainPage = () => {
             <Program />
             <Resume />
             <Portfolio />
+            <PromoTraining />
             <ListQuestions />
             <CalorieСalculator />
             <Contacts />

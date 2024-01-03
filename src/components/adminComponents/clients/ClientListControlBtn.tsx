@@ -5,6 +5,7 @@ export const ClientListControlBtn = ({
     handleGetAllClients,
     handlerModalCreateClient,
     handlerModalSendEmail,
+    handlerModalCreateNewsletter,
 }: IClientListControlBtn) => {
     return (
         <>
@@ -33,6 +34,12 @@ export const ClientListControlBtn = ({
                     onClick={handlerModalSendEmail}
                 >
                     Отправить письмо
+                </div>
+                <div
+                    className='admin-control__btnControl'
+                    onClick={handlerModalCreateNewsletter}
+                >
+                    Рассылка
                 </div>
             </div>
         </>

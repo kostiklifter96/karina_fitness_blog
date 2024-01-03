@@ -1,0 +1,131 @@
+.promoTraining {
+    padding-top: 120px;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 400px 560px;
+    }
+
+    &__subtitle {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 60px;
+    }
+
+    &__text {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &__video {
+        &-item {
+            width: auto;
+            height: 600px;
+        }
+    }
+
+    &__text {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .promoTraining {
+        .divider {
+            margin: 10px 0 0 3px;
+        }
+
+        &__subtitle {
+            font-size: 36px;
+            line-height: 40px;
+        }
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 350px 340px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .promoTraining {
+        &__subtitle {
+            // font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 270px 270px;
+            gap: 10px;
+        }
+
+        &__video {
+            &-item {
+                width: auto;
+                height: 450px;
+            }
+        }
+    }
+}
+
+// @media (max-width: 600px) {
+//     .promoTraining {
+//         &__subtitle {
+//             // font-size: 32px;
+//             line-height: 40px;
+//             margin-bottom: 10px;
+//         }
+
+//         &__wrapper {
+//             display: grid;
+//             grid-template-columns: 270px 270px;
+//             gap: 10px;
+//         }
+
+//         &__video {
+//             &-item {
+//                 width: auto;
+//                 height: 450px;
+//             }
+//         }
+//     }
+// }
+@media (max-width: 576px) {
+    .promoTraining {
+        .divider {
+            margin: 15px auto;
+        }
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "subtitle" "video" "text";
+        }
+
+        &__subtitle {
+            grid-area: subtitle;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+
+        &__video {
+            margin: 0 auto;
+            grid-area: video;
+            &-item {
+                width: auto;
+                height: 500px;
+            }
+        }
+
+        &__text {
+            grid-area: text;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+}

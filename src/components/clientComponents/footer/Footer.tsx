@@ -14,10 +14,18 @@ export const Footer = () => {
 
                     <div className='footer__center'>
                         <div>
-                            <Link to='/offer'>Договор Оферты</Link>{" "}
+                            <Link
+                                to='/offer'
+                                style={{ color: "rgb(200, 197, 197)" }}
+                            >
+                                Договор Оферты
+                            </Link>{" "}
                         </div>
                         <div>
-                            <Link to='/policy'>
+                            <Link
+                                to='/policy'
+                                style={{ color: "rgb(200, 197, 197)" }}
+                            >
                                 Политика Конфиденциальности
                             </Link>{" "}
                         </div>

@@ -1,5 +1,6 @@
 import {
     changeStatusCreateClient,
+    changeStatusCreateNewsletter,
     changeStatusCreatePayment,
     changeStatusLogIn,
     changeStatusSendEmailFromAdmin,
@@ -44,6 +45,10 @@ export const useAdminControl = () => {
         dispatch(getClientEmailFromList(perEmail));
     };
 
+    const handlerModalCreateNewsletter = () => {
+        dispatch(changeStatusCreateNewsletter(true));
+    };
+
     const logOut = () => {
         dispatch(changeStatusLogIn(false));
         localStorage.clear();
@@ -67,6 +72,7 @@ export const useAdminControl = () => {
         handlerModalCreatePayment,
         handlerModalSendEmail,
         handlerModalCreateClient,
+        handlerModalCreateNewsletter,
         loading,
     };
 };

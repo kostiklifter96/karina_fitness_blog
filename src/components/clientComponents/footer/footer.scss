@@ -12,13 +12,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-weight: bold;
         font-size: 13px;
         line-height: 25px;
     }
 
     &__payment img {
         width: 99%;
+    }
+
+    a:link {
+        color: rgb(200, 197, 197);
+
+        font-weight: 100;
     }
 }
 

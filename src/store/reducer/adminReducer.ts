@@ -5,6 +5,7 @@ interface IInitialStateAdmin {
     statusSendEmailFromAdmin: boolean;
     statusCreateClient: boolean;
     statusCreatePayment: boolean;
+    statusCreateNewsletter: boolean;
 }
 
 const initialState: IInitialStateAdmin = {
@@ -12,6 +13,7 @@ const initialState: IInitialStateAdmin = {
     statusSendEmailFromAdmin: false,
     statusCreateClient: false,
     statusCreatePayment: false,
+    statusCreateNewsletter: false,
 };
 
 export const adminReducer = createSlice({
@@ -30,6 +32,9 @@ export const adminReducer = createSlice({
         changeStatusCreatePayment: (state, action) => {
             state.statusCreatePayment = action.payload;
         },
+        changeStatusCreateNewsletter: (state, action) => {
+            state.statusCreateNewsletter = action.payload;
+        },
     },
 });
 
@@ -38,4 +43,5 @@ export const {
     changeStatusSendEmailFromAdmin,
     changeStatusCreateClient,
     changeStatusCreatePayment,
+    changeStatusCreateNewsletter,
 } = adminReducer.actions;

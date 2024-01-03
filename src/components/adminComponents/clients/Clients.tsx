@@ -15,6 +15,7 @@ export const Clients = () => {
         handlerModalChangeClientForPersonally,
         handlerModalSendEmailForPersonally,
         handlerModalCreatePayment,
+        handlerModalCreateNewsletter,
         loading,
     } = useAdminControl();
 
@@ -24,6 +25,7 @@ export const Clients = () => {
                 handleGetAllClients={handleGetAllClients}
                 handlerModalCreateClient={handlerModalCreateClient}
                 handlerModalSendEmail={handlerModalSendEmail}
+                handlerModalCreateNewsletter={handlerModalCreateNewsletter}
                 logOut={logOut}
             />
 

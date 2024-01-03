@@ -169,4 +169,5 @@ export interface IClientListControlBtn {
     handleGetAllClients: () => void;
     handlerModalCreateClient: () => void;
     handlerModalSendEmail: () => void;
+    handlerModalCreateNewsletter: () => void;
 }

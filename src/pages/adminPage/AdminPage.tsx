@@ -1,6 +1,7 @@
 import {
     Clients,
     ModalAddOrChangeClient,
+    ModalCreateNewsletter,
     ModalCreatePaymentUrl,
     ModalSendEmailFromAdmin,
 } from "components";
@@ -17,6 +18,7 @@ export const AdminPage = () => {
         statusSendEmailFromAdmin,
         statusCreateClient,
         statusCreatePayment,
+        statusCreateNewsletter,
     } = useAppSelector((state) => state.admin);
 
     useEffect(() => {
@@ -29,6 +31,7 @@ export const AdminPage = () => {
         <>
             {statusCreatePayment && <ModalCreatePaymentUrl />}
             {statusCreateClient && <ModalAddOrChangeClient />}
+            {statusCreateNewsletter && <ModalCreateNewsletter />}
 
             {statusSendEmailFromAdmin && <ModalSendEmailFromAdmin />}
 

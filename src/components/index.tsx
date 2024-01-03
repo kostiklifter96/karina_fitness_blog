@@ -10,9 +10,11 @@ export { MarqueeComponent } from "./clientComponents/marqueeComponent/MarqueeCom
 export { Menu } from "./clientComponents/menu/Menu";
 export { Portfolio } from "./clientComponents/portfolio/Portfolio";
 export { Program } from "./clientComponents/program/Program";
+export { PromoTraining } from "./clientComponents/promoTraining/PromoTraining";
 export { Promo } from "./clientComponents/promo_header/Promo";
 export { Resume } from "./clientComponents/resume/Resume";
 export { Timer } from "./clientComponents/timer/Timer";
 export { ModalAddOrChangeClient } from "./modal/modalAddOrChangeClient/ModalAddOrChangeClient";
+export { ModalCreateNewsletter } from "./modal/modalCreateNewsletter/ModalCreateNewsletter";
 export { ModalCreatePaymentUrl } from "./modal/modalCreatePaymentUrl/ModalCreatePaymentUrl";
 export { ModalSendEmailFromAdmin } from "./modal/modalSendEmailFromAdmin/ModalSendEmailFromAdmin";
