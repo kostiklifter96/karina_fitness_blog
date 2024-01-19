@@ -2,9 +2,9 @@ import { MarqueeComponent } from "components/index";
 import { useEffect, useState } from "react";
 import { getPaymentURL } from "utils/getPaymentURL";
 import { data } from "../../../data/data";
-import "./aboutMe.scss";
+import "./courseDescription.scss";
 
-export const AboutMe = () => {
+export const CourseDescription = () => {
     const [linkUrl, setLinkUrl] = useState<string>("");
 
     const handlerPay = async () => {
@@ -18,21 +18,21 @@ export const AboutMe = () => {
     }, []);
 
     return (
-        <section className='about' id='about'>
+        <section className='courseDescription' id='courseDescription'>
             <div className='container'>
-                <div className='about__wrapper'>
-                    <div className='about__photo'></div>
+                <div className='courseDescription__wrapper'>
+                    <div className='courseDescription__photo'></div>
 
-                    <div className='about__descr'>
-                        {/* <h2 className='title title__fz16 about__title'>
+                    <div className='courseDescription__descr'>
+                        {/* <h2 className='title title__fz16 courseDescription__title'>
                             Обо Мне
                         </h2> */}
-                        <div className='title title__fz36 about__subtitle'>
+                        <div className='title title__fz36 courseDescription__subtitle'>
                             За эти 3 недели вы:
                         </div>
                         <div className='divider'></div>
                         {data[0].aboutMe?.map((el) => (
-                            <p className='about__text' key={el.id}>
+                            <p className='courseDescription__text' key={el.id}>
                                 {el.description}
                             </p>
                         ))}
@@ -59,7 +59,7 @@ export const AboutMe = () => {
                         </MarqueeComponent>{" "}
                     </div>
 
-                    <div className='about__btn'>
+                    <div className='courseDescription__btn'>
                         <a
                             href={linkUrl}
                             className='btn'

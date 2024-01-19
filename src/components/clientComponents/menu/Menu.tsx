@@ -37,7 +37,7 @@ export const Menu = ({ activeStyle, removeActiveStyle }: IMenu) => {
                             className='menu__link'
                             onClick={() => removeActiveStyle()}
                         >
-                            <a href='#about'>ЗА ЭТИ 3 НЕДЕЛИ ВЫ</a>
+                            <a href='#courseDescription'>ЗА ЭТИ 3 НЕДЕЛИ ВЫ</a>
                         </li>
                         <li
                             className='menu__link'

@@ -9,9 +9,7 @@ export const Resume = () => {
     return (
         <section className='resume' id='resume'>
             <div className='container'>
-                <div className='title title__fz36 resume__title'>
-                    Преимущества
-                </div>
+                <div className='title title__fz36 resume__title'>Обо мне</div>
                 <h3 className='title title__fz19 resume__title'>
                     Твой тренер Карина Наумова
                 </h3>{" "}

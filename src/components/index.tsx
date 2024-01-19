@@ -1,9 +1,9 @@
 export { ClientListControlBtn } from "./adminComponents/clients/ClientListControlBtn";
 export { Clients } from "./adminComponents/clients/Clients";
-export { AboutMe } from "./clientComponents/aboutMe/AboutMe";
 export { Aside } from "./clientComponents/aside/Aside";
 export { CalorieСalculator } from "./clientComponents/calorieСalculator/CalorieСalculator";
 export { Contacts } from "./clientComponents/contacts/Contacts";
+export { CourseDescription } from "./clientComponents/courseDescription/CourseDescription";
 export { Footer } from "./clientComponents/footer/Footer";
 export { ListQuestions } from "./clientComponents/listQuestions/ListQuestions";
 export { MarqueeComponent } from "./clientComponents/marqueeComponent/MarqueeComp";

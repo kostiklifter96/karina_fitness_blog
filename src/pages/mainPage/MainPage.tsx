@@ -1,8 +1,8 @@
 import {
-    AboutMe,
     Aside,
     CalorieСalculator,
     Contacts,
+    CourseDescription,
     Footer,
     ListQuestions,
     Menu,
@@ -32,7 +32,7 @@ export const MainPage = () => {
             <Aside />
             <Promo addActiveStyle={addActiveStyle} />
             {/* <Timer /> */}
-            <AboutMe />
+            <CourseDescription />
             <Program />
             <Resume />
             <Portfolio />
