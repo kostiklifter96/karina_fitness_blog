@@ -40,22 +40,22 @@ export const Contacts = () => {
 
                             <div className='contacts__social'>
                                 <a
-                                    href='https://t.me/KarinaNaumova'
+                                    href='https://t.me/Naumova_karina'
                                     target='blank'
-                                    className='contacts__link'
+                                    className='contacts__link tg_btn-contacts'
                                 >
                                     <TGIcon />
                                 </a>
                                 <a
                                     href='https://vk.com/public222068936'
                                     target='blank'
-                                    className='contacts__link'
+                                    className='contacts__link vk_btn-contacts'
                                 >
                                     <VKIcon />
                                 </a>
                                 <a
                                     href='https://www.instagram.com/naumova_karina/?hl=ru'
-                                    className='contacts__link'
+                                    className='contacts__link inst_btn-contacts'
                                     target='blank'
                                 >
                                     <INSTIcon />

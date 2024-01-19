@@ -8,10 +8,14 @@ export const getPaymentURL = async (sum: number) => {
             transaction_type: "payment",
             attempts: 3,
             settings: {
-                return_url: "https://naumova-team.by/",
+                success_url: `${process.env.REACT_APP_FRONT_PROD}success`,
+                decline_url: `${process.env.REACT_APP_FRONT_PROD}error`,
+                fail_url: `${process.env.REACT_APP_FRONT_PROD}error`,
+                cancel_url: `${process.env.REACT_APP_FRONT_PROD}error`,
+                auto_return: "0",
                 button_text: "Оплатить",
                 button_next_text: "Вернуться в магазин",
-                notification_url: "https://nodebackend.naumova-team.by/payment",
+                notification_url: `${process.env.REACT_APP_BACKEND_PROD}payment`,
                 language: "ru",
                 customer_fields: {
                     visible: ["first_name", "last_name", "email"],

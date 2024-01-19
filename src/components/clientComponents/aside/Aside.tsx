@@ -7,15 +7,15 @@ export const Aside = () => {
     return (
         <aside className='sidepanel'>
             <a
-                href='https://t.me/KarinaNaumova'
-                className='sidepanel__link'
+                href='https://t.me/Naumova_karina'
+                className='sidepanel__link tg_btn-aside'
                 target='blank'
             >
                 <TGIcon />
             </a>
             <a
                 href='https://vk.com/public222068936'
-                className='sidepanel__link'
+                className='sidepanel__link vk_btn-aside'
                 target='blank'
             >
                 <VKIcon />
@@ -24,7 +24,7 @@ export const Aside = () => {
             <a
                 href='https://www.instagram.com/naumova_karina/?hl=ru'
                 target='blank'
-                className='sidepanel__link'
+                className='sidepanel__link inst_btn-aside'
             >
                 <INSTIcon />
             </a>

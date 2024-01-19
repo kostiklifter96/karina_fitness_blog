@@ -28,7 +28,7 @@ export const AboutMe = () => {
                             Обо Мне
                         </h2> */}
                         <div className='title title__fz36 about__subtitle'>
-                            За эти 2 недели вы:
+                            За эти 3 недели вы:
                         </div>
                         <div className='divider'></div>
                         {data[0].aboutMe?.map((el) => (
@@ -59,7 +59,7 @@ export const AboutMe = () => {
                         </MarqueeComponent>{" "}
                     </div>
 
-                    {/* <div className='about__btn'>
+                    <div className='about__btn'>
                         <a
                             href={linkUrl}
                             className='btn'
@@ -68,7 +68,7 @@ export const AboutMe = () => {
                         >
                             Хочу красивое тело
                         </a>
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </section>

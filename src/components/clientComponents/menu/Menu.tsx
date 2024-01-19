@@ -61,6 +61,12 @@ export const Menu = ({ activeStyle, removeActiveStyle }: IMenu) => {
                             className='menu__link'
                             onClick={() => removeActiveStyle()}
                         >
+                            <a href='#promoTraining'>ТРЕНИРОВКА ЯГОДИЦ</a>
+                        </li>
+                        <li
+                            className='menu__link'
+                            onClick={() => removeActiveStyle()}
+                        >
                             <a href='#listQuestions'>ВОПРОС - ОТВЕТ</a>
                         </li>
                         <li
@@ -82,16 +88,16 @@ export const Menu = ({ activeStyle, removeActiveStyle }: IMenu) => {
 
                 <div className='menu__social'>
                     <a
-                        href='https://t.me/KarinaNaumova'
+                        href='https://t.me/Naumova_karina'
                         target='blank'
-                        className='menu__social-link'
+                        className='menu__social-link tg_btn-menu'
                     >
                         <TGIcon />
                     </a>
                     <a
                         href='https://vk.com/public222068936'
                         target='blank'
-                        className='menu__social-link'
+                        className='menu__social-link vk_btn-menu'
                     >
                         <VKIcon />
                     </a>
@@ -99,7 +105,7 @@ export const Menu = ({ activeStyle, removeActiveStyle }: IMenu) => {
                     <a
                         href='https://www.instagram.com/naumova_karina/?hl=ru'
                         target='blank'
-                        className='menu__social-link'
+                        className='menu__social-link inst_btn-menu'
                     >
                         <INSTIcon />
                     </a>

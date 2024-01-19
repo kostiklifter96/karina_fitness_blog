@@ -33,8 +33,8 @@ export const Promo = ({ addActiveStyle }: IPromoHeader) => {
             <div className='container'>
                 <div className='promo__contacts'>
                     <a
-                        href='https://t.me/KarinaNaumova'
-                        className='promo__contacts-link'
+                        href='https://t.me/Naumova_karina'
+                        className='promo__contacts-link tg_btn-header'
                         target='blank'
                     >
                         <TGIcon />
@@ -42,41 +42,43 @@ export const Promo = ({ addActiveStyle }: IPromoHeader) => {
                     <a
                         href='https://vk.com/public222068936'
                         target='blank'
-                        className='promo__contacts-link'
+                        className='promo__contacts-link vk_btn-header'
                     >
                         <VKIcon />
                     </a>
                     <a
                         href='https://www.instagram.com/naumova_karina/?hl=ru'
                         target='blank'
-                        className='promo__contacts-link'
+                        className='promo__contacts-link inst_btn-header'
                     >
                         <INSTIcon />
                     </a>
                 </div>
                 <div className='title title__fz16 promo__subtitle'>
-                    {/* 11.12 - 24.12 */}
+                    12.02 - 03.03
                 </div>
                 <h1 className='title title__fz48 promo__title'>Naumova_team</h1>
 
                 <div className='promo__btns'>
                     <a
-                        // href={linkUrl}
+                        href={linkUrl}
                         target='_blank'
                         className='promo__links-main btn'
                         rel='noreferrer'
                     >
-                        {/* Присоединиться за{" "}
+                        Присоединиться за{" "}
                         {String(process.env.REACT_APP_GENERAL_PRICE).substring(
                             0,
                             2,
                         )}{" "}
-                        BYN */}
-                        Регистрация закрыта
+                        BYN
                     </a>
 
-                    {/* <a href='#about' className='promo__links'>
-                        Обо мне
+                    {/* <a
+                        href='https://t.me/Naumova_karina'
+                        className='promo__links-main btn'
+                    >
+                        Получить <br />5 бесплатных тренировок
                     </a> */}
                 </div>
             </div>

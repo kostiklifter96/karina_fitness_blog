@@ -57,17 +57,11 @@
     &__btns {
         margin-top: 25px;
         width: 150px;
-        display: flex;
+        display: grid;
         align-items: center;
-        justify-content: space-between;
+        row-gap: 15px;
     }
-    // a {
-    //     color: #000000;
 
-    //     &:visited {
-    //         color: #000000;
-    //     }
-    // }
     &__links {
         font-weight: 700;
         text-decoration: none;
@@ -147,7 +141,7 @@
             width: 300px;
         }
         .hamburger {
-            position: absolute;
+            position: fixed;
             top: 20px;
             left: 10px;
             height: 21px;

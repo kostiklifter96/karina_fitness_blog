@@ -11,6 +11,7 @@
     visibility: hidden;
     opacity: 0;
     transition: all 0.6s;
+    overflow-y: auto;
 
     &.active {
         left: 0;
@@ -22,8 +23,8 @@
         position: relative;
         width: 345px;
         background-color: $main-color;
-        height: 100%;
-        padding-top: 140px;
+        min-height: 100vh;
+        padding-top: 100px;
         padding-left: 40px;
         transition: all 0.6s;
         z-index: 10;
@@ -70,19 +71,18 @@
 
             &:hover {
                 color: rgb(243, 240, 240);
-                font-size: 26px;
+                font-size: 24.5px;
             }
         }
     }
     &__social {
-        position: absolute;
-        top: 75%;
-        left: 50%;
-        transform: translate(-50%);
-        width: 130px;
+        margin-top: 40px;
+        padding: 10px;
+        width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        gap: 15px;
 
         &-link:hover svg path {
             fill: $primary-color;

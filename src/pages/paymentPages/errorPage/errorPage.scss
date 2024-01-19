@@ -1,0 +1,106 @@
+@import "../../../sass/base/variables";
+@import "../../../sass/base/mixins";
+
+.errorPage {
+    position: relative;
+    background: #201e26;
+    color: white;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    header {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #2a2830;
+        height: 60px;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+
+        button {
+            background: #2a2830;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            border: none;
+            font-weight: 700;
+            letter-spacing: 1.3px;
+        }
+        button:hover {
+            transition: 200ms;
+            color: $main-color;
+        }
+    }
+
+    &__info {
+        margin: 100px 0;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 100px;
+        row-gap: 30px;
+
+        &-result {
+            font-size: 47px;
+            font-weight: bold;
+        }
+
+        &-instructions {
+            letter-spacing: 1px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .errorPage {
+        &__info {
+            row-gap: 50px;
+            // &-result {
+            //     font-size: 47px;
+            //     font-weight: bold;
+            // }
+
+            // &-instructions {
+            //     // margin-top: 10px;
+            // }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .errorPage {
+        &__info {
+            // row-gap: 50px;
+            &-result {
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+            // &-instructions {
+            //     // margin-top: 10px;
+            // }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .errorPage {
+        &__info {
+            // row-gap: 50px;
+            &-result {
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            // &-instructions {
+            //     // margin-top: 10px;
+            // }
+        }
+    }
+}

@@ -3,9 +3,9 @@ import "./promoTraining.scss";
 
 export const PromoTraining = () => {
     return (
-        <section className='promoTraining' id='promoTraining'>
+        <section className='promoTraining'>
             <div className='container'>
-                <div className='promoTraining__wrapper'>
+                <div className='promoTraining__wrapper' id='promoTraining'>
                     <div className='promoTraining__video'>
                         <video
                             src={videoTraining}

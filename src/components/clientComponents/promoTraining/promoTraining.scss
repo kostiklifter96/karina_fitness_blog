@@ -1,9 +1,13 @@
 .promoTraining {
     padding-top: 120px;
+    .divider {
+        margin: 10px 0 0 3px;
+    }
 
     &__wrapper {
         display: grid;
-        grid-template-columns: 400px 560px;
+        grid-template-columns: 400px 480px;
+        column-gap: 70px;
     }
 
     &__subtitle {
@@ -20,7 +24,7 @@
 
     &__video {
         &-item {
-            width: auto;
+            width: 500px;
             height: 600px;
         }
     }
@@ -44,6 +48,14 @@
         &__wrapper {
             display: grid;
             grid-template-columns: 350px 340px;
+            column-gap: 10px;
+        }
+
+        &__video {
+            &-item {
+                width: 300px;
+                height: 500px;
+            }
         }
     }
 }
@@ -59,13 +71,13 @@
         &__wrapper {
             display: grid;
             grid-template-columns: 270px 270px;
-            gap: 10px;
+            // gap: 10px;
         }
 
         &__video {
             &-item {
-                width: auto;
-                height: 450px;
+                width: 250px;
+                height: 400px;
             }
         }
     }
