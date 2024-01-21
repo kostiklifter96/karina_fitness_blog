@@ -54,10 +54,15 @@ export const Promo = ({ addActiveStyle }: IPromoHeader) => {
                         <INSTIcon />
                     </a>
                 </div>
-                <div className='title title__fz16 promo__subtitle'>
-                    12.02 - 03.03
+
+                <div className='title title__fz36 promo__subtitle'>
+                    {/* <div className='logoTeam'>Naumova Team</div> */}
+                    <div>Старт - 12.02</div>
                 </div>
-                <h1 className='title title__fz48 promo__title'>Naumova_team</h1>
+                <h1 className='title title__fz48 promo__title'>
+                    {" "}
+                    Naumova Team
+                </h1>
 
                 <div className='promo__btns'>
                     <a

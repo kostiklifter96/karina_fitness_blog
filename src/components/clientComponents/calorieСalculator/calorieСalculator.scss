@@ -132,6 +132,31 @@
             margin-bottom: 10px;
         }
     }
+    &__btn {
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & a {
+            background: black !important;
+            animation: pulse-2 0.6s ease infinite;
+            color: white;
+            font-size: 20px;
+        }
+
+        & a:hover {
+            color: white;
+        }
+    }
+
+    @keyframes pulse-2 {
+        from {
+        }
+        to {
+            box-shadow: 0 0 30px black;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -147,7 +172,7 @@
 @media (max-width: 768px) {
     .calorieСalculator {
         &__grid {
-            grid-template-columns: repeat(4, 145px);
+            grid-template-columns: repeat(4, 144px);
         }
     }
 }

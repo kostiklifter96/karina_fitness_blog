@@ -1,6 +1,6 @@
 export const data = [
     {
-        aboutMe: [
+        courseDescription: [
             {
                 id: 1,
                 description:
@@ -52,7 +52,7 @@ export const data = [
                 img: "icons/skills/telegram-communication-chat-interaction-network-connection-svgrepo-com.svg",
             },
         ],
-        resume: [
+        aboutMe: [
             {
                 id: 1,
                 universityOrPosition: "МГЭИ им. Сахарова при БГУ",
@@ -163,6 +163,46 @@ export const data = [
                 title: "Для какого уровня подготовки рассчитаны тренировки ?",
                 description:
                     "Тренировки рассчитаны для любого уровня подготовки, т.к в момент тренировки я объясняю, как упростить /усложнить упражнение. Если у вас есть травмы или особенности организма, то проконсультируйтесь с врачом",
+            },
+        ],
+        advantages: [
+            {
+                id: 1,
+                description:
+                    "Naumova_team – не марафон на 1000 ккал, а возможность избавиться от мифов и достичь целей в фитнесе",
+            },
+            {
+                id: 2,
+                description:
+                    "Основа – похудение, рельеф, выносливость, осанка, здоровье суставов",
+            },
+            {
+                id: 3,
+                description: "Ежемесячные новые тренировки",
+            },
+            {
+                id: 4,
+                description: "Доступная цена",
+            },
+            {
+                id: 5,
+                description: "Без затрат на спортивные принадлежности",
+            },
+            {
+                id: 6,
+                description: "Простое и недорогое меню",
+            },
+            {
+                id: 7,
+                description: "30-минутные тренировки для всего тела",
+            },
+            {
+                id: 8,
+                description: "Подходит для всех уровней подготовки",
+            },
+            {
+                id: 9,
+                description: "Растяжка в конце каждой тренировки",
             },
         ],
     },

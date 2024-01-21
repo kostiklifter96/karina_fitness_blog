@@ -10,6 +10,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    z-index: 11;
     cursor: pointer;
     span {
         display: block;
@@ -27,15 +28,27 @@
     position: relative;
     background: url("../../../../public/image/MainBackground-min.jpg") no-repeat
         40% / cover;
+
     padding-top: 130px;
+
     &__title {
         width: 535px;
         margin-top: 10px;
+        display: none;
+    }
+
+    &__subtitle {
+        margin-top: 130px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 60px !important;
     }
 
     &__contacts {
+        display: none;
+
         width: 130px;
-        display: flex;
         justify-content: space-between;
         margin-bottom: 40px;
 
@@ -44,22 +57,11 @@
         }
     }
 
-    // &__subtitle {
-    //     margin-top: 50px;
-    //     position: relative;
-    //     padding-left: 10px;
-    //     z-index: 2;
-    //     @include before_circle;
-    //     &:before {
-    //         background: $primary-color;
-    //     }
-    // }
     &__btns {
-        margin-top: 25px;
-        width: 150px;
-        display: grid;
-        align-items: center;
-        row-gap: 15px;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     &__links {
@@ -87,6 +89,7 @@
     }
 
     .btn {
+        width: 200px;
         font-weight: bold;
         font-size: 17px;
     }
@@ -121,9 +124,16 @@
 
 @media (max-width: 1200px) {
     .promo {
+        background: url("../../../../public/image/MainBackground-min.jpg")
+            no-repeat 47% / cover;
         &__title {
             line-height: 50px;
             width: 400px;
+            font-size: 36px !important;
+        }
+
+        &__subtitle {
+            font-size: 50px !important;
         }
     }
     .hamburger {
@@ -132,21 +142,41 @@
 }
 
 @media (max-width: 992px) {
+    .promo {
+        background: url("../../../../public/image/MainBackground-min.jpg")
+            no-repeat 48% / cover;
+
+        &__title {
+            line-height: 50px;
+            width: 400px;
+            font-size: 36px !important;
+        }
+
+        &__subtitle {
+            font-size: 38px !important;
+        }
+    }
 }
 
 @media (max-width: 768px) {
     .promo {
+        &__contacts {
+            display: flex;
+        }
         &__title {
             line-height: 39px;
             width: 300px;
         }
-        .hamburger {
-            position: fixed;
-            top: 20px;
-            left: 10px;
-            height: 21px;
 
-            align-items: flex-start;
+        &__subtitle {
+            font-size: 23px !important;
+        }
+
+        background: url("../../../../public/image/MainBackground-min.jpg")
+            no-repeat 50% / cover;
+
+        .hamburger {
+            right: 10px;
         }
 
         &-helper {
@@ -157,15 +187,38 @@
 
 @media (max-width: 576px) {
     .promo {
-        background: url("../../../../public/image/MainBackground-min-4a.jpg")
-            no-repeat 30% / cover;
+        background: url("../../../../public/image/MainBackground-min-4a.jpg");
+        background-size: cover; /* или contain */
+        background-position: left 30% center;
+        background-repeat: no-repeat;
+
         &__btns {
-            margin-top: 30px;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         &__title {
-            line-height: 35px;
-            width: 250px;
+            // padding-left: 10px;
+            // width: 100%;
+            // background: white;
+            display: block;
+            position: absolute;
+            z-index: 10;
+            top: -10px;
+            left: 10px;
+            font-size: 23px !important;
         }
+
+        &__subtitle {
+            height: 130px;
+            align-items: center;
+            font-size: 29px !important;
+        }
+    }
+
+    .logoTeam {
+        display: none;
     }
 
     .hamburger {

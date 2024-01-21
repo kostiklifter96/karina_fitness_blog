@@ -49,13 +49,19 @@ export const Menu = ({ activeStyle, removeActiveStyle }: IMenu) => {
                             className='menu__link'
                             onClick={() => removeActiveStyle()}
                         >
-                            <a href='#resume'>ПРЕИМУЩЕСТВА</a>
+                            <a href='#advantages'>ПРЕИМУЩЕСТВА</a>
                         </li>
                         <li
                             className='menu__link'
                             onClick={() => removeActiveStyle()}
                         >
                             <a href='#portfolio'>ДО / ПОСЛЕ</a>
+                        </li>
+                        <li
+                            className='menu__link'
+                            onClick={() => removeActiveStyle()}
+                        >
+                            <a href='#aboutMe'>ОБО МНЕ</a>
                         </li>
                         <li
                             className='menu__link'

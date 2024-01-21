@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { getPaymentURL } from "utils/getPaymentURL";
 import "./calorieСalculator.scss";
 
 const option = [
@@ -31,6 +32,17 @@ export const CalorieСalculator = () => {
     const [age, setAge] = useState<number>(0);
     const [activeLevel, setActivLevel] = useState<number>(0);
     const [resCal, setResCal] = useState<number>(0);
+    const [linkUrl, setLinkUrl] = useState<string>("");
+
+    const handlerPay = async () => {
+        setLinkUrl(
+            await getPaymentURL(Number(process.env.REACT_APP_GENERAL_PRICE)),
+        );
+    };
+
+    useEffect(() => {
+        handlerPay();
+    }, []);
 
     useEffect(() => {
         if (weight && height && age && activeLevel) {
@@ -149,6 +161,16 @@ export const CalorieСalculator = () => {
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                    <div className='calorieСalculator__btn'>
+                        <a
+                            href={linkUrl}
+                            className='btn'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            {"Хочу в команду"}
+                        </a>
                     </div>
                 </div>
             </section>

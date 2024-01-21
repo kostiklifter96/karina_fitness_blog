@@ -2,7 +2,7 @@ import { useTimer } from "hooks/useTimer";
 import "./timer.scss";
 
 export const Timer = () => {
-    const date = new Date("Thu, 11 Dec 2023 00:00:00");
+    const date = new Date("Thu, 12 Feb 2024 00:00:00");
 
     const { day, hours, minutes, seconds, diffDays, diffS, diffH, diffM } =
         useTimer({ date });
@@ -12,7 +12,7 @@ export const Timer = () => {
             <div className='container'>
                 <div className='title title__fz36 timer__title'>
                     {/* До старта осталось: */}
-                    До предновогоднего интенсива осталось:
+                    До старта осталось:
                 </div>{" "}
                 <div className='timer__grid'>
                     <div className='timer__grid-item'>

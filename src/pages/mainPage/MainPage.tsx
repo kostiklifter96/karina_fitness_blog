@@ -1,4 +1,6 @@
 import {
+    AboutMe,
+    Advantages,
     Aside,
     CalorieСalculator,
     Contacts,
@@ -6,11 +8,12 @@ import {
     Footer,
     ListQuestions,
     Menu,
+    PanelNavigation,
     Portfolio,
     Program,
     Promo,
     PromoTraining,
-    Resume,
+    Timer,
 } from "components/index";
 import { useTouch } from "hooks/useTouch";
 
@@ -25,17 +28,19 @@ export const MainPage = () => {
 
     return (
         <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
+            <PanelNavigation />
             <Menu
                 activeStyle={activeStyle}
                 removeActiveStyle={removeActiveStyle}
             />
             <Aside />
             <Promo addActiveStyle={addActiveStyle} />
-            {/* <Timer /> */}
-            <CourseDescription />
+            <Timer />
             <Program />
-            <Resume />
+            <CourseDescription />
+            <Advantages />
             <Portfolio />
+            <AboutMe />
             <PromoTraining />
             <ListQuestions />
             <CalorieСalculator />

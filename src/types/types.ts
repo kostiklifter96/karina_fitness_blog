@@ -84,6 +84,11 @@ export interface IResume {
     img: string;
 }
 
+export interface IAdvantages {
+    id: number;
+    description: string;
+}
+
 export interface IResponse {
     success: boolean;
     message: string;

@@ -31,7 +31,7 @@ export const CourseDescription = () => {
                             За эти 3 недели вы:
                         </div>
                         <div className='divider'></div>
-                        {data[0].aboutMe?.map((el) => (
+                        {data[0].courseDescription?.map((el) => (
                             <p className='courseDescription__text' key={el.id}>
                                 {el.description}
                             </p>

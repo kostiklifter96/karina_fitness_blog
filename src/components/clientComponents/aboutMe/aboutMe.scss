@@ -1,0 +1,101 @@
+@import "../../../sass/base/variables";
+@import "../../../sass/base/mixins";
+
+.aboutMe {
+    padding-top: 120px;
+
+    &__descr {
+        margin: 0 20px;
+        .divider {
+            margin: 0 auto 15px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 500px 400px;
+        grid-template-rows: 550px;
+        column-gap: 20px;
+        justify-content: center;
+    }
+
+    &__photo {
+        background-image: url("../../../../public/image/dark-resume.jpg");
+        background-size: cover; /* или contain */
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    &__text {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &__item {
+        padding-top: 10px;
+
+        position: relative;
+
+        &-icon {
+            @include before_circle;
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 15%;
+                left: -40px;
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                background: $main-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .aboutMe {
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 350px 350px;
+            grid-template-rows: 550px;
+            column-gap: 20px;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutMe {
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 600px 300px;
+        }
+
+        &__descr {
+            margin-top: 10px;
+            grid-row: 2;
+        }
+        &__text {
+            padding-left: 50px;
+        }
+
+        // &__item {
+        //     padding-top: 10px;
+        // }
+    }
+}
+
+@media (max-width: 576px) {
+    .aboutMe {
+        &__wrapper {
+            grid-template-rows: 600px minmax(350px, auto);
+        }
+    }
+}

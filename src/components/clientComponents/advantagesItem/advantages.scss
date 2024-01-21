@@ -1,7 +1,7 @@
 @import "../../../sass/base/variables";
 @import "../../../sass/base/mixins";
 
-.resume {
+.advantages {
     padding-top: 120px;
 
     &__title {
@@ -11,10 +11,9 @@
     }
 
     &__wrapper {
-        padding: 0px 5px 0 5px;
+        padding: 20px 5px 0 5px;
         display: grid;
-        grid-template-columns: 1fr;
-        // column-gap: 135px;
+        grid-template-columns: 700px;
         justify-content: center;
     }
 
@@ -22,8 +21,13 @@
         &-title {
             position: relative;
         }
+
         ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 100px;
             list-style-type: none;
+            padding: 0;
             li {
                 position: relative;
             }
@@ -31,9 +35,6 @@
     }
     &__item {
         position: relative;
-
-        display: grid;
-        grid-template-columns: 1fr;
 
         &-head {
             position: relative;
@@ -49,6 +50,7 @@
             font-size: 18px;
             line-height: 18px;
         }
+
         &-icon {
             position: absolute;
             top: 22px;
@@ -59,7 +61,7 @@
                 position: absolute;
                 z-index: -1;
                 top: -27%;
-                left: -50px;
+                left: -40px;
                 width: 15px;
                 height: 15px;
                 border-radius: 100%;
@@ -73,6 +75,7 @@
             }
         }
         &-location {
+            max-width: 500px;
             font-size: 16px;
             font-weight: bold;
             line-height: 18px;
@@ -83,7 +86,7 @@
 }
 
 @media (max-width: 1200px) {
-    .resume {
+    .advantages {
         &__wrapper {
             // grid-template-columns: repeat(2, 1fr);
             row-gap: 40px;
@@ -101,7 +104,7 @@
 }
 
 @media (max-width: 992px) {
-    .resume {
+    .advantages {
         padding-top: 90px;
 
         &__wrapper {
@@ -109,11 +112,6 @@
 
             grid-template-columns: 1fr;
             row-gap: 10px;
-        }
-
-        &__column {
-            padding-left: 70px;
-            display: flex;
         }
 
         &__item {
@@ -125,7 +123,7 @@
 }
 
 @media (max-width: 768px) {
-    .resume {
+    .advantages {
         padding-top: 90px;
 
         &__wrapper {
@@ -136,6 +134,15 @@
 
         &__column {
             padding-left: 0;
+            ul {
+                display: block;
+                grid-template-columns: 1fr;
+                list-style-type: none;
+                padding: 0;
+                li {
+                    position: relative;
+                }
+            }
         }
 
         &__item {
@@ -148,12 +155,12 @@
 }
 
 @media (max-width: 576px) {
-    .resume {
+    .advantages {
         padding-top: 70px;
 
-        // &__wrapper {
-        //     grid-template-columns: 300px;
-        // }
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
 
         &__column {
             padding-left: 0px;
@@ -204,7 +211,7 @@
 }
 
 // @media (max-width: 348px) {
-//     .resume {
+//     .advantages {
 //         &__item {
 //             padding: 0 16px;
 //             margin-bottom: 75px;
