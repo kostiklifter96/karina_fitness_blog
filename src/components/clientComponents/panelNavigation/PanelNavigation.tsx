@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { IPromoHeader } from "types/types";
 import "./panelNavigation.scss";
 
-export const PanelNavigation = () => {
+export const PanelNavigation = ({ addActiveStyle }: IPromoHeader) => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
 
@@ -12,6 +13,7 @@ export const PanelNavigation = () => {
             setVisible(
                 prevScrollPos > currentScrollPos || currentScrollPos === 0,
             );
+
             setPrevScrollPos(currentScrollPos);
         };
 
@@ -29,14 +31,56 @@ export const PanelNavigation = () => {
         >
             <div className='container'>
                 <div className='panelNavigation__wrapper'>
-                    <div className='title panelNavigation__icon'>
+                    <a href='#promo' className='panelNavigation__icon'>
                         Naumova Team
-                    </div>
+                    </a>
 
                     <div className='panelNavigation__info'>
-                        <div>ОБО МНЕ</div>
-                        <div>ПРЕИМУЩЕСТВА</div>
-                        <div>ДО / ПОСЛЕ</div>
+                        <a
+                            href='#program'
+                            className='panelNavigation__info-item'
+                        >
+                            ПРОГРАММА
+                        </a>
+                        <a
+                            href='#courseDescription'
+                            className='panelNavigation__info-item'
+                        >
+                            ЗА ЭТИ 3 НЕДЕЛИ
+                        </a>
+                        <a
+                            href='#advantages'
+                            className='panelNavigation__info-item'
+                        >
+                            ПРЕИМУЩЕСТВА
+                        </a>
+                        <a
+                            href='#portfolio'
+                            className='panelNavigation__info-item'
+                        >
+                            ДО / ПОСЛЕ
+                        </a>
+                        <a
+                            href='#aboutMe'
+                            className='panelNavigation__info-item'
+                        >
+                            ОБО МНЕ
+                        </a>
+                        <a
+                            href='#calorieСalculator'
+                            className='panelNavigation__info-item'
+                        >
+                            РАСЧЕТ КАЛОРИЙ
+                        </a>
+                    </div>
+
+                    <div
+                        className='panelNavigation__hamburger'
+                        onClick={() => addActiveStyle()}
+                    >
+                        <span></span>
+                        <span className='long'></span>
+                        <span></span>
                     </div>
                 </div>
             </div>

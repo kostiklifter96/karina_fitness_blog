@@ -28,13 +28,13 @@ export const MainPage = () => {
 
     return (
         <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
-            <PanelNavigation />
+            <PanelNavigation addActiveStyle={addActiveStyle} />
             <Menu
                 activeStyle={activeStyle}
                 removeActiveStyle={removeActiveStyle}
             />
             <Aside />
-            <Promo addActiveStyle={addActiveStyle} />
+            <Promo />
             <Timer />
             <Program />
             <CourseDescription />

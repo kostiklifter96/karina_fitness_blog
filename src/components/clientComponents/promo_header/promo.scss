@@ -1,48 +1,52 @@
 @import "../../../sass/base/variables";
 @import "../../../sass/base/mixins";
 
-.hamburger {
-    position: fixed;
-    top: 20px;
-    left: 90px;
-    height: 21px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    z-index: 11;
-    cursor: pointer;
-    span {
-        display: block;
-        width: 30px;
-        height: 3px;
-        background: #151812;
-    }
-    // span.long {
-    //     width: 36px;
-    // }
-}
-
 .promo {
     min-height: 100vh;
     position: relative;
-    background: url("../../../../public/image/MainBackground-min.jpg") no-repeat
-        40% / cover;
-
+    background: url("../../../../public/image/main.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding-top: 130px;
 
     &__title {
-        width: 535px;
-        margin-top: 10px;
-        display: none;
+        padding-top: 50px;
+        width: 700px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 50px;
+        line-height: 50px;
     }
 
     &__subtitle {
-        margin-top: 130px;
-        width: 100%;
+        margin-top: 30px;
+        width: 700px;
+        font-size: 28px;
+    }
+
+    &__info {
+        position: absolute;
+        top: 390px;
         display: flex;
-        justify-content: space-between;
-        font-size: 60px !important;
+
+        &-start {
+            position: absolute;
+            top: 90px;
+            left: 90px;
+            display: grid;
+            grid-template-columns: 150px 60px;
+            column-gap: 30px;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 40px;
+
+            div {
+                font-family: "Montserrat", sans-serif;
+                line-height: 50px;
+            }
+        }
     }
 
     &__contacts {
@@ -59,13 +63,19 @@
 
     &__btns {
         position: absolute;
-        top: 80%;
+        top: 90%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    .btn {
+        width: 200px;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 50px;
+    }
 
     &__links {
-        font-weight: 700;
+        font-weight: 670;
         text-decoration: none;
 
         &-main {
@@ -86,12 +96,6 @@
             color: $primary-color;
             transition: all 0.4s ease;
         }
-    }
-
-    .btn {
-        width: 200px;
-        font-weight: bold;
-        font-size: 17px;
     }
 
     &-helper {
@@ -120,108 +124,279 @@
             transition: all 1s ease;
         }
     }
+
+    .priceIcon {
+        width: 280px;
+        height: 280px;
+    }
 }
 
 @media (max-width: 1200px) {
     .promo {
-        background: url("../../../../public/image/MainBackground-min.jpg")
-            no-repeat 47% / cover;
+        background: url("../../../../public/image/main.jpg");
+        background-size: cover; /* или contain */
+        background-position: center center;
+        background-repeat: no-repeat;
+
         &__title {
+            padding-top: 100px;
+            width: 600px;
+            font-size: 45px;
             line-height: 50px;
-            width: 400px;
-            font-size: 36px !important;
         }
 
         &__subtitle {
-            font-size: 50px !important;
+            margin-top: 30px;
+            width: 600px;
+            font-size: 24px;
         }
-    }
-    .hamburger {
-        left: 10px;
+
+        .priceIcon {
+            width: 260px;
+            height: 260px;
+        }
+
+        &__info {
+            position: absolute;
+            top: 410px;
+            display: flex;
+
+            &-start {
+                position: absolute;
+                top: 89px;
+                left: 90px;
+                display: grid;
+                grid-template-columns: 150px 60px;
+                column-gap: 10px;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: bold;
+                font-size: 37px;
+
+                div {
+                    font-family: "Montserrat", sans-serif;
+                    line-height: 42px;
+                }
+            }
+        }
     }
 }
 
 @media (max-width: 992px) {
     .promo {
-        background: url("../../../../public/image/MainBackground-min.jpg")
-            no-repeat 48% / cover;
+        background-size: cover; /* или contain */
+        background-position: right 41% center;
+        background-repeat: no-repeat;
 
         &__title {
+            padding-top: 50px;
+            width: 480px;
+            font-size: 37px;
             line-height: 50px;
-            width: 400px;
-            font-size: 36px !important;
         }
 
         &__subtitle {
-            font-size: 38px !important;
+            margin-top: 20px;
+            width: 450px;
+            font-size: 19px;
+        }
+
+        .priceIcon {
+            width: 220px;
+            height: 220px;
+        }
+
+        &__info {
+            position: absolute;
+            top: 335px;
+            display: flex;
+
+            &-start {
+                position: absolute;
+                top: 79px;
+                left: 73px;
+                display: grid;
+                grid-template-columns: 130px 60px;
+                column-gap: 0;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: bold;
+                font-size: 30px;
+
+                div {
+                    font-family: "Montserrat", sans-serif;
+                    line-height: 32px;
+                }
+            }
         }
     }
 }
 
 @media (max-width: 768px) {
     .promo {
-        &__contacts {
-            display: flex;
-        }
+        background-size: cover; /* или contain */
+        background-position: right 36% center;
+        background-repeat: no-repeat;
+
         &__title {
-            line-height: 39px;
-            width: 300px;
+            padding-top: 30px;
+            width: 400px;
+            font-size: 32px;
+            line-height: 30px;
         }
 
         &__subtitle {
-            font-size: 23px !important;
+            margin-top: 9px;
+            width: 400px;
+            font-size: 17px;
+            line-height: 20px;
         }
 
-        background: url("../../../../public/image/MainBackground-min.jpg")
-            no-repeat 50% / cover;
-
-        .hamburger {
-            right: 10px;
+        .priceIcon {
+            width: 180px;
+            height: 180px;
         }
 
-        &-helper {
-            display: block;
+        &__info {
+            position: absolute;
+            top: 250px;
+            display: flex;
+
+            &-start {
+                position: absolute;
+                top: 66px;
+                left: 55px;
+                display: grid;
+                grid-template-columns: 115px 60px;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: bold;
+                font-size: 26px;
+
+                div {
+                    font-family: "Montserrat", sans-serif;
+                    line-height: 25px;
+                }
+            }
         }
     }
 }
 
 @media (max-width: 576px) {
     .promo {
-        background: url("../../../../public/image/MainBackground-min-4a.jpg");
         background-size: cover; /* или contain */
-        background-position: left 30% center;
+        background-position: right 31% center;
         background-repeat: no-repeat;
 
-        &__btns {
-            position: absolute;
-            top: 70%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
         &__title {
-            // padding-left: 10px;
-            // width: 100%;
-            // background: white;
-            display: block;
             position: absolute;
-            z-index: 10;
-            top: -10px;
-            left: 10px;
-            font-size: 23px !important;
+            top: -2.5%;
+            left: 5%;
+            width: 300px;
+            font-size: 24px;
+            line-height: 25px;
         }
 
         &__subtitle {
-            height: 130px;
-            align-items: center;
-            font-size: 29px !important;
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            // margin-top: 9px;
+            width: 260px;
+            font-size: 16px;
+
+            line-height: 20px;
+        }
+
+        .priceIcon {
+            width: 170px;
+            height: 170px;
+        }
+
+        &__info {
+            position: absolute;
+            top: 20%;
+            display: flex;
+
+            &-start {
+                position: absolute;
+                top: 60px;
+                left: 58px;
+                display: grid;
+                grid-template-columns: 100px 60px;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: bold;
+                font-size: 24px;
+
+                div {
+                    font-family: "Montserrat", sans-serif;
+                    line-height: 25px;
+                }
+            }
         }
     }
 
     .logoTeam {
         display: none;
     }
+}
 
-    .hamburger {
-        right: 20px;
+@media (max-width: 390px) {
+    .promo {
+        background-size: cover; /* или contain */
+        background-position: right 31% center;
+        background-repeat: no-repeat;
+
+        &__title {
+            position: absolute;
+            top: -2.5%;
+            left: 5%;
+            width: 280px;
+            font-size: 21px;
+            line-height: 25px;
+        }
+
+        &__subtitle {
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            // margin-top: 9px;
+            width: 260px;
+            font-size: 16px;
+
+            line-height: 20px;
+        }
+
+        .priceIcon {
+            width: 170px;
+            height: 170px;
+        }
+
+        &__info {
+            position: absolute;
+            display: flex;
+
+            &-start {
+                position: absolute;
+                top: 60px;
+                left: 58px;
+                display: grid;
+                grid-template-columns: 100px 60px;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: bold;
+                font-size: 24px;
+
+                div {
+                    font-family: "Montserrat", sans-serif;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+
+    .logoTeam {
+        display: none;
     }
 }

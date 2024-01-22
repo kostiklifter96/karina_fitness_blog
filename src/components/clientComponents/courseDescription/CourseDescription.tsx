@@ -66,7 +66,7 @@ export const CourseDescription = () => {
                             target='_blank'
                             rel='noreferrer'
                         >
-                            Хочу красивое тело
+                            Оплатить
                         </a>
                     </div>
                 </div>

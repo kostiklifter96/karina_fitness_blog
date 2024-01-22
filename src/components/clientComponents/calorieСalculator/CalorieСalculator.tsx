@@ -169,7 +169,7 @@ export const CalorieСalculator = () => {
                             target='_blank'
                             rel='noreferrer'
                         >
-                            {"Хочу в команду"}
+                            Купить доступ
                         </a>
                     </div>
                 </div>

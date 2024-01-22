@@ -43,7 +43,7 @@ export const Portfolio = () => {
                         target='_blank'
                         rel='noreferrer'
                     >
-                        Участвую
+                        Купить
                     </a>
                 </div>
             </div>

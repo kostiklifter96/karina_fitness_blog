@@ -1,3 +1,6 @@
+@import "../../../sass/base/variables";
+@import "../../../sass/base/mixins";
+
 .panelNavigation {
     z-index: 15;
     position: fixed;
@@ -16,14 +19,129 @@
     }
 
     &__icon {
+        font-family: "Montserrat", sans-serif;
+
         font-weight: bold;
-        letter-spacing: 10px;
-    }
-    &__info {
-        width: 500px;
-        display: flex;
-        justify-content: space-between;
         font-size: 20px;
-        font-weight: bold;
+        // letter-spacing: 1px;
+        color: rgb(243, 240, 240);
+        text-decoration: none;
+        &:hover {
+            color: $main-color;
+        }
+    }
+
+    &__info {
+        // margin-left: 50px;
+        width: 620px;
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        // column-gap: 15px;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 13px;
+        font-weight: 500;
+
+        &-item {
+            cursor: pointer;
+            color: rgb(243, 240, 240);
+            text-decoration: none;
+            &:hover {
+                color: $main-color;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__hamburger {
+        height: 21px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        cursor: pointer;
+        span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: rgb(243, 240, 240);
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .panelNavigation {
+        &__icon {
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: rgb(243, 240, 240);
+            text-decoration: none;
+            &:hover {
+                color: $main-color;
+            }
+        }
+
+        &__info {
+            // margin-left: 50px;
+            width: 500px;
+            font-size: 10px;
+            font-weight: bold;
+
+            &-item {
+                cursor: pointer;
+                color: rgb(243, 240, 240);
+                text-decoration: none;
+                &:hover {
+                    color: $main-color;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .panelNavigation {
+        // display: none;
+        background-color: rgba(0, 0, 0, 0.01);
+        color: white;
+        transition: top 0.3s, opacity 0.5s;
+        &__wrapper {
+            display: flex;
+            justify-content: right;
+        }
+
+        &__icon {
+            display: none;
+        }
+
+        &__info {
+            display: none;
+        }
+
+        &__hamburger {
+            height: 21px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            z-index: 10;
+
+            cursor: pointer;
+            span {
+                display: block;
+                width: 30px;
+                height: 3px;
+                background: black;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .panelNavigation {
+        // width: 95%;
     }
 }

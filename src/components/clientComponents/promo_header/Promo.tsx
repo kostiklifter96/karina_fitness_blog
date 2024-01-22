@@ -2,12 +2,11 @@ import { INSTIcon } from "components/clientComponents/svgIcon/INSTIcon";
 import { TGIcon } from "components/clientComponents/svgIcon/TGIcon";
 import { VKIcon } from "components/clientComponents/svgIcon/VKIcon";
 import { useEffect, useState } from "react";
-import { IPromoHeader } from "types/types";
 import { getPaymentURL } from "utils/getPaymentURL";
-import { PromoHelper } from "./PromoHelper";
+import { PriceIcon } from "../svgIcon/PriceIcon";
 import "./promo.scss";
 
-export const Promo = ({ addActiveStyle }: IPromoHeader) => {
+export const Promo = () => {
     const [linkUrl, setLinkUrl] = useState<string>("");
 
     const handlerPay = async () => {
@@ -21,15 +20,7 @@ export const Promo = ({ addActiveStyle }: IPromoHeader) => {
     }, []);
 
     return (
-        <section className='promo'>
-            <div className='hamburger' onClick={() => addActiveStyle()}>
-                <span></span>
-                <span className='long'></span>
-                <span></span>
-            </div>
-
-            <PromoHelper />
-
+        <section className='promo' id='promo'>
             <div className='container'>
                 <div className='promo__contacts'>
                     <a
@@ -55,36 +46,43 @@ export const Promo = ({ addActiveStyle }: IPromoHeader) => {
                     </a>
                 </div>
 
-                <div className='title title__fz36 promo__subtitle'>
-                    {/* <div className='logoTeam'>Naumova Team</div> */}
-                    <div>Старт - 12.02</div>
+                <div className='promo__title'>ОНЛАЙН-АБОНЕМЕНТ НА 21 ДЕНЬ</div>
+                <div className='promo__subtitle'>
+                    Каждую неделю 3 новые тренировки по 30 минут, готовый план
+                    питания на 3 недели и чат единомышленников
                 </div>
-                <h1 className='title title__fz48 promo__title'>
-                    {" "}
-                    Naumova Team
-                </h1>
+
+                <div className='promo__info'>
+                    <div className='promo__info-svg'>
+                        <PriceIcon />
+                    </div>
+                    <div className='promo__info-start'>
+                        <div>59 BYN</div>
+                        <div>СТАРТ 12.02</div>
+                    </div>
+                </div>
 
                 <div className='promo__btns'>
-                    <a
+                    {/* <a
                         href={linkUrl}
                         target='_blank'
                         className='promo__links-main btn'
                         rel='noreferrer'
                     >
-                        Присоединиться за{" "}
+                        Купить доступ за{" "}
                         {String(process.env.REACT_APP_GENERAL_PRICE).substring(
                             0,
                             2,
                         )}{" "}
                         BYN
-                    </a>
-
-                    {/* <a
-                        href='https://t.me/Naumova_karina'
+                    </a>{" "} */}
+                    <a
+                        href='#program'
                         className='promo__links-main btn'
+                        rel='noreferrer'
                     >
-                        Получить <br />5 бесплатных тренировок
-                    </a> */}
+                        ПОДРОБНЕЕ
+                    </a>
                 </div>
             </div>
         </section>
