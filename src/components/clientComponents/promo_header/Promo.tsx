@@ -1,24 +1,10 @@
 import { INSTIcon } from "components/clientComponents/svgIcon/INSTIcon";
 import { TGIcon } from "components/clientComponents/svgIcon/TGIcon";
 import { VKIcon } from "components/clientComponents/svgIcon/VKIcon";
-import { useEffect, useState } from "react";
-import { getPaymentURL } from "utils/getPaymentURL";
 import { PriceIcon } from "../svgIcon/PriceIcon";
 import "./promo.scss";
 
 export const Promo = () => {
-    const [linkUrl, setLinkUrl] = useState<string>("");
-
-    const handlerPay = async () => {
-        setLinkUrl(
-            await getPaymentURL(Number(process.env.REACT_APP_GENERAL_PRICE)),
-        );
-    };
-
-    useEffect(() => {
-        handlerPay();
-    }, []);
-
     return (
         <section className='promo' id='promo'>
             <div className='container'>

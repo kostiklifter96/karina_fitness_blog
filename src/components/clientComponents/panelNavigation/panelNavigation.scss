@@ -8,6 +8,7 @@
     background-color: black;
     color: white;
     transition: top 0.3s, opacity 0.5s;
+    margin-bottom: 45px;
 
     &__wrapper {
         width: 100%;
@@ -104,17 +105,9 @@
 
 @media (max-width: 768px) {
     .panelNavigation {
-        // display: none;
-        background-color: rgba(0, 0, 0, 0.01);
-        color: white;
         transition: top 0.3s, opacity 0.5s;
         &__wrapper {
             display: flex;
-            justify-content: right;
-        }
-
-        &__icon {
-            display: none;
         }
 
         &__info {
@@ -134,14 +127,11 @@
                 display: block;
                 width: 30px;
                 height: 3px;
-                background: black;
+                background: rgb(243, 240, 240);
             }
         }
     }
 }
 
 @media (max-width: 576px) {
-    .panelNavigation {
-        // width: 95%;
-    }
 }

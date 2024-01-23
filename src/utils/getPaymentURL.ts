@@ -30,22 +30,19 @@ export const getPaymentURL = async (sum: number) => {
     });
 
     try {
-        const res = await fetch(
-            "https://checkout.bepaid.by/ctp/api/checkouts",
-            {
-                method: "POST",
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                    Authorization:
-                        "Basic " +
-                        Buffer.from(
-                            `${process.env.REACT_APP_SHOP_ID}:${process.env.REACT_APP_SHOP_SECRET_KEY}`,
-                        ).toString("base64"),
-                },
-                body: params,
+        const res = await fetch(`${process.env.REACT_APP_BEPAID}`, {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+                Authorization:
+                    "Basic " +
+                    Buffer.from(
+                        `${process.env.REACT_APP_SHOP_ID}:${process.env.REACT_APP_SHOP_SECRET_KEY}`,
+                    ).toString("base64"),
             },
-        );
+            body: params,
+        });
 
         const data = await res.json();
 

@@ -4,11 +4,10 @@
 .promo {
     min-height: 100vh;
     position: relative;
-    background: url("../../../../public/image/main.jpg");
+    background: url("../../../../public/image/IMG_6713.JPG");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     padding-top: 130px;
 
     &__title {
@@ -133,7 +132,6 @@
 
 @media (max-width: 1200px) {
     .promo {
-        background: url("../../../../public/image/main.jpg");
         background-size: cover; /* или contain */
         background-position: center center;
         background-repeat: no-repeat;
@@ -185,7 +183,7 @@
 @media (max-width: 992px) {
     .promo {
         background-size: cover; /* или contain */
-        background-position: right 41% center;
+        background-position: right 30% center;
         background-repeat: no-repeat;
 
         &__title {
@@ -284,54 +282,64 @@
 
 @media (max-width: 576px) {
     .promo {
-        background-size: cover; /* или contain */
-        background-position: right 31% center;
+        margin-top: 10px;
+        background: url("../../../../public/image/IMG_6713.JPG");
+        background-size: cover;
+        background-position: right 28% center;
         background-repeat: no-repeat;
+
+        &__btns {
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
         &__title {
             position: absolute;
-            top: -2.5%;
+            top: 6%;
             left: 5%;
-            width: 300px;
-            font-size: 24px;
+            width: 360px;
+            font-size: 27px;
             line-height: 25px;
+            color: black;
         }
 
         &__subtitle {
             position: absolute;
-            top: 10%;
+            top: 18%;
             left: 5%;
             // margin-top: 9px;
-            width: 260px;
-            font-size: 16px;
+            width: 250px;
+            font-size: 17px;
 
             line-height: 20px;
         }
 
         .priceIcon {
-            width: 170px;
-            height: 170px;
+            width: 150px;
+            height: 150px;
         }
 
         &__info {
             position: absolute;
-            top: 20%;
+            top: 29%;
             display: flex;
 
             &-start {
                 position: absolute;
-                top: 60px;
-                left: 58px;
+                top: 53px;
+                left: 48px;
                 display: grid;
-                grid-template-columns: 100px 60px;
+                grid-template-columns: 92px 60px;
                 justify-content: space-between;
                 align-items: center;
                 font-weight: bold;
-                font-size: 24px;
+                font-size: 22px;
 
                 div {
                     font-family: "Montserrat", sans-serif;
-                    line-height: 25px;
+                    line-height: 23px;
                 }
             }
         }
@@ -345,54 +353,55 @@
 @media (max-width: 390px) {
     .promo {
         background-size: cover; /* или contain */
-        background-position: right 31% center;
+        background-position: right 30% center;
         background-repeat: no-repeat;
 
         &__title {
             position: absolute;
-            top: -2.5%;
+            top: 6%;
             left: 5%;
-            width: 280px;
-            font-size: 21px;
+            width: 300px;
+            font-size: 22px;
             line-height: 25px;
+            color: black;
         }
 
         &__subtitle {
             position: absolute;
-            top: 10%;
+            top: 18%;
             left: 5%;
-            // margin-top: 9px;
-            width: 260px;
-            font-size: 16px;
+            width: 250px;
+            font-size: 17px;
 
             line-height: 20px;
         }
 
-        .priceIcon {
-            width: 170px;
-            height: 170px;
-        }
+        // .priceIcon {
+        //     width: 10px;
+        //     height: 170px;
+        // }
 
         &__info {
             position: absolute;
             display: flex;
+            top: 30%;
 
-            &-start {
-                position: absolute;
-                top: 60px;
-                left: 58px;
-                display: grid;
-                grid-template-columns: 100px 60px;
-                justify-content: space-between;
-                align-items: center;
-                font-weight: bold;
-                font-size: 24px;
+            // &-start {
+            //     position: absolute;
+            //     top: 60px;
+            //     left: 58px;
+            //     display: grid;
+            //     grid-template-columns: 100px 60px;
+            //     justify-content: space-between;
+            //     align-items: center;
+            //     font-weight: bold;
+            //     // font-size: 24px;
 
-                div {
-                    font-family: "Montserrat", sans-serif;
-                    line-height: 25px;
-                }
-            }
+            //     div {
+            //         font-family: "Montserrat", sans-serif;
+            //         line-height: 25px;
+            //     }
+            // }
         }
     }
 

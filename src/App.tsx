@@ -12,7 +12,11 @@ import "./sass/libs/style.scss";
 
 function App() {
     return (
-        <BrowserRouter basename='/'>
+        <BrowserRouter
+        // basename='/'
+        // basename='/karina_fitness_blog'
+        // "homepage": "https://kostiklifter96.github.io/karina_fitness_blog",
+        >
             <Routes>
                 <Route path='/' element={<MainPage />} />
                 <Route path='/login' element={<LoginPage />} />
