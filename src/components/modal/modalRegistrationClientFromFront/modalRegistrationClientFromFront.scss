@@ -1,0 +1,71 @@
+@import "../../../sass/base/variables";
+@import "../../../sass/base/mixins";
+
+.modalRegistrationClientFromFront {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+
+    &__section {
+        padding: 20px;
+        background: white;
+        // border: 1px solid red;
+        border-radius: 20px;
+        max-width: 450px;
+
+        h1 {
+            font-family: "Montserrat", sans-serif;
+        }
+    }
+    &__info {
+        margin: 20px 0 15px 0;
+    }
+    &__form {
+        margin: 10px 0 30px 0;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 50px);
+        row-gap: 10px;
+        // padding: 0 20px;
+
+        input {
+            padding-left: 15px;
+            border-radius: 25px;
+            border: none;
+            background: rgb(215, 212, 212);
+            &:focus {
+                outline: none;
+                border: 1px solid $main-color; /* Можно задать стили рамки в фокусе по вашему выбору */
+                /* Другие стили, если необходимо */
+            }
+        }
+        button {
+            background: rgb(236, 201, 26);
+            border-radius: 25px;
+            border: none;
+        }
+    }
+
+    &__policy {
+        font-size: 12px;
+        margin-bottom: 10px;
+        color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@media (max-width: 576px) {
+    .modalRegistrationClientFromFront {
+        &__section {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 0 10px;
+        }
+    }
+}

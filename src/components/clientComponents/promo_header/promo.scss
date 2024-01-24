@@ -2,7 +2,7 @@
 @import "../../../sass/base/mixins";
 
 .promo {
-    min-height: 100vh;
+    height: 850px;
     position: relative;
     background: url("../../../../public/image/IMG_6713.JPG");
     background-size: cover;
@@ -66,6 +66,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     .btn {
         width: 200px;
         font-weight: bold;
@@ -107,6 +108,7 @@
     @keyframes pulse-1 {
         from {
         }
+
         to {
             transition: all 0.5s ease;
             box-shadow: 0 0 16px wheat;
@@ -118,6 +120,7 @@
             left: 0px;
             transition: all 1s ease;
         }
+
         to {
             left: 20px;
             transition: all 1s ease;
@@ -132,7 +135,8 @@
 
 @media (max-width: 1200px) {
     .promo {
-        background-size: cover; /* или contain */
+        background-size: cover;
+        /* или contain */
         background-position: center center;
         background-repeat: no-repeat;
 
@@ -182,7 +186,8 @@
 
 @media (max-width: 992px) {
     .promo {
-        background-size: cover; /* или contain */
+        background-size: cover;
+        /* или contain */
         background-position: right 30% center;
         background-repeat: no-repeat;
 
@@ -232,7 +237,8 @@
 
 @media (max-width: 768px) {
     .promo {
-        background-size: cover; /* или contain */
+        background-size: cover;
+        /* или contain */
         background-position: right 36% center;
         background-repeat: no-repeat;
 
@@ -283,10 +289,7 @@
 @media (max-width: 576px) {
     .promo {
         margin-top: 10px;
-        background: url("../../../../public/image/IMG_6713.JPG");
-        background-size: cover;
-        background-position: right 28% center;
-        background-repeat: no-repeat;
+        background-position: right 30% center;
 
         &__btns {
             position: absolute;
@@ -300,7 +303,7 @@
             top: 6%;
             left: 5%;
             width: 360px;
-            font-size: 27px;
+            font-size: 29px;
             line-height: 25px;
             color: black;
         }
@@ -311,7 +314,7 @@
             left: 5%;
             // margin-top: 9px;
             width: 250px;
-            font-size: 17px;
+            font-size: 20px;
 
             line-height: 20px;
         }
@@ -352,8 +355,70 @@
 
 @media (max-width: 390px) {
     .promo {
-        background-size: cover; /* или contain */
-        background-position: right 30% center;
+        background-size: cover;
+        /* или contain */
+        background-position: right 31% center;
+        background-repeat: no-repeat;
+
+        &__title {
+            position: absolute;
+            top: 6%;
+            left: 5%;
+            width: 345px;
+            font-size: 28px;
+            line-height: 27px;
+            color: black;
+        }
+
+        &__subtitle {
+            position: absolute;
+            top: 17%;
+            left: 5%;
+            width: 260px;
+            font-size: 20px;
+
+            line-height: 20px;
+        }
+
+        .priceIcon {
+            width: 180px;
+            height: 180px;
+        }
+
+        &__info {
+            position: absolute;
+            display: flex;
+            top: 26.5%;
+
+            &-start {
+                position: absolute;
+                top: 65px;
+                left: 67px;
+                display: grid;
+                grid-template-columns: 100px 60px;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: bold;
+                // font-size: 24px;
+
+                div {
+                    font-family: "Montserrat", sans-serif;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+
+    .logoTeam {
+        display: none;
+    }
+}
+
+@media (max-width: 365px) {
+    .promo {
+        background-size: cover;
+        /* или contain */
+        background-position: right 31.5% center;
         background-repeat: no-repeat;
 
         &__title {
@@ -361,14 +426,14 @@
             top: 6%;
             left: 5%;
             width: 300px;
-            font-size: 22px;
-            line-height: 25px;
+            font-size: 24.5px;
+            line-height: 20px;
             color: black;
         }
 
         &__subtitle {
             position: absolute;
-            top: 18%;
+            top: 16%;
             left: 5%;
             width: 250px;
             font-size: 17px;
@@ -376,36 +441,94 @@
             line-height: 20px;
         }
 
-        // .priceIcon {
-        //     width: 10px;
-        //     height: 170px;
-        // }
+        .priceIcon {
+            width: 150px;
+            height: 150px;
+        }
 
         &__info {
             position: absolute;
             display: flex;
-            top: 30%;
+            top: 27%;
 
-            // &-start {
-            //     position: absolute;
-            //     top: 60px;
-            //     left: 58px;
-            //     display: grid;
-            //     grid-template-columns: 100px 60px;
-            //     justify-content: space-between;
-            //     align-items: center;
-            //     font-weight: bold;
-            //     // font-size: 24px;
+            &-start {
+                position: absolute;
+                top: 55px;
+                left: 51px;
+                display: grid;
+                grid-template-columns: 90px 60px;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: bold;
+                font-size: 21px;
 
-            //     div {
-            //         font-family: "Montserrat", sans-serif;
-            //         line-height: 25px;
-            //     }
-            // }
+                div {
+                    font-family: "Montserrat", sans-serif;
+                    line-height: 22px;
+                }
+            }
         }
     }
 
     .logoTeam {
         display: none;
+    }
+}
+
+// for apple
+@media only screen and (width: 375px) and (height: 812px) and (-webkit-device-pixel-ratio: 2) {
+    .promo {
+        background-size: cover;
+        /* или contain */
+        background-position: right 31% center;
+        background-repeat: no-repeat;
+
+        &__title {
+            position: absolute;
+            top: 6%;
+            left: 5%;
+            width: 345px;
+            font-size: 28px;
+            line-height: 27px;
+            color: black;
+        }
+
+        &__subtitle {
+            position: absolute;
+            top: 17%;
+            left: 5%;
+            width: 260px;
+            font-size: 20px;
+
+            line-height: 20px;
+        }
+
+        .priceIcon {
+            width: 180px;
+            height: 180px;
+        }
+
+        &__info {
+            position: absolute;
+            display: flex;
+            top: 26%;
+
+            &-start {
+                position: absolute;
+                top: 65px;
+                left: 67px;
+                display: grid;
+                grid-template-columns: 100px 60px;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: bold;
+                // font-size: 24px;
+
+                div {
+                    font-family: "Montserrat", sans-serif;
+                    line-height: 25px;
+                }
+            }
+        }
     }
 }

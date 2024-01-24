@@ -1,14 +1,15 @@
 import { Buffer } from "buffer";
 window.Buffer = window.Buffer || require("buffer").Buffer;
 
-export const getPaymentURL = async (sum: number) => {
+export const getPaymentURL = async () => {
     const params = JSON.stringify({
         checkout: {
-            test: false,
+            test: true,
             transaction_type: "payment",
             attempts: 3,
             settings: {
-                success_url: `${process.env.REACT_APP_FRONT_PROD}success`,
+                // success_url: `${process.env.REACT_APP_FRONT_PROD}success`,
+                success_url: `http://localhost:3000/success`,
                 decline_url: `${process.env.REACT_APP_FRONT_PROD}error`,
                 fail_url: `${process.env.REACT_APP_FRONT_PROD}error`,
                 cancel_url: `${process.env.REACT_APP_FRONT_PROD}error`,
@@ -17,13 +18,13 @@ export const getPaymentURL = async (sum: number) => {
                 button_next_text: "Вернуться в магазин",
                 notification_url: `${process.env.REACT_APP_BACKEND_PROD}payment`,
                 language: "ru",
-                customer_fields: {
-                    visible: ["first_name", "last_name", "email"],
-                },
+                // customer_fields: {
+                //     visible: ["first_name", "last_name", "email"],
+                // },
             },
             order: {
                 currency: "BYN",
-                amount: sum,
+                amount: process.env.REACT_APP_GENERAL_PRICE,
                 description: "Order description",
             },
         },
@@ -46,7 +47,8 @@ export const getPaymentURL = async (sum: number) => {
 
         const data = await res.json();
 
-        return await data.checkout.redirect_url;
+        // return await data.checkout.redirect_url;
+        return await data.checkout;
     } catch (error) {
         if (error instanceof Error) {
             console.log(error.message);

@@ -19,4 +19,5 @@ export { Timer } from "./clientComponents/timer/Timer";
 export { ModalAddOrChangeClient } from "./modal/modalAddOrChangeClient/ModalAddOrChangeClient";
 export { ModalCreateNewsletter } from "./modal/modalCreateNewsletter/ModalCreateNewsletter";
 export { ModalCreatePaymentUrl } from "./modal/modalCreatePaymentUrl/ModalCreatePaymentUrl";
+export { ModalRegistrationClientFromFront } from "./modal/modalRegistrationClientFromFront/ModalRegistrationClientFromFront";
 export { ModalSendEmailFromAdmin } from "./modal/modalSendEmailFromAdmin/ModalSendEmailFromAdmin";

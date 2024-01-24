@@ -1,21 +1,11 @@
 import { MarqueeComponent } from "components/index";
-import { useEffect, useState } from "react";
-import { getPaymentURL } from "utils/getPaymentURL";
+import { changeStatusRegistationClient } from "store/reducer/adminReducer";
+import { useAppDispatch } from "store/store";
 import { data } from "../../../data/data";
 import "./courseDescription.scss";
 
 export const CourseDescription = () => {
-    const [linkUrl, setLinkUrl] = useState<string>("");
-
-    const handlerPay = async () => {
-        setLinkUrl(
-            await getPaymentURL(Number(process.env.REACT_APP_GENERAL_PRICE)),
-        );
-    };
-
-    useEffect(() => {
-        handlerPay();
-    }, []);
+    const dispatch = useAppDispatch();
 
     return (
         <section className='courseDescription' id='courseDescription'>
@@ -60,17 +50,25 @@ export const CourseDescription = () => {
                     </div>
 
                     <div className='courseDescription__btn'>
-                        <a
-                            href={linkUrl}
+                        <button
                             className='btn'
-                            target='_blank'
-                            rel='noreferrer'
+                            onClick={() =>
+                                dispatch(changeStatusRegistationClient(true))
+                            }
                         >
                             Оплатить
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
     );
 };
+<a
+    href={"courseDescription"}
+    className='btn'
+    // target='_blank'
+    rel='noreferrer'
+>
+    Оплатить
+</a>;

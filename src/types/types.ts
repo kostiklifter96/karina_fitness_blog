@@ -121,6 +121,7 @@ export interface ICreateClient {
     amount: number;
     stream: number;
     paymentStatus: number;
+
     textForMailer?: string;
 }
 

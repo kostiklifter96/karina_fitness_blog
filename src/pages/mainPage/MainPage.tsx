@@ -8,6 +8,7 @@ import {
     Footer,
     ListQuestions,
     Menu,
+    ModalRegistrationClientFromFront,
     PanelNavigation,
     Portfolio,
     Program,
@@ -16,8 +17,12 @@ import {
     Timer,
 } from "components/index";
 import { useTouch } from "hooks/useTouch";
+import { useAppSelector } from "store/store";
 
 export const MainPage = () => {
+    const statusRegistationClient = useAppSelector(
+        (state) => state.admin.statusRegistationClient,
+    );
     const {
         addActiveStyle,
         removeActiveStyle,
@@ -28,6 +33,7 @@ export const MainPage = () => {
 
     return (
         <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
+            {statusRegistationClient && <ModalRegistrationClientFromFront />}
             <PanelNavigation addActiveStyle={addActiveStyle} />
             <Menu
                 activeStyle={activeStyle}

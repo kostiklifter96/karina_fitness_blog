@@ -11,9 +11,7 @@ export const Portfolio = () => {
     const [linkUrl, setLinkUrl] = useState<string>("");
 
     const handlerPay = async () => {
-        setLinkUrl(
-            await getPaymentURL(Number(process.env.REACT_APP_GENERAL_PRICE)),
-        );
+        setLinkUrl(await getPaymentURL());
     };
 
     useEffect(() => {

@@ -1,9 +1,54 @@
 import { Footer } from "components";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./successPage.scss";
 
 export const SuccessPage = () => {
     const navigation = useNavigate();
+    const location = useLocation();
+
+    const sendTokenAndStatus = async ({
+        token,
+        status,
+    }: {
+        token: string;
+        status: string;
+    }) => {
+        if (token || status) {
+            try {
+                const response = await fetch(
+                    `http://localhost:4999/controlPayment?apikey=${process.env.REACT_APP_API_KEY}`,
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({ token, status }),
+                    },
+                );
+                return response.json();
+            } catch (error) {
+                if (error instanceof Error) {
+                    alert("Ошибка регистрации. Попробуйте еще раз");
+                }
+            }
+        }
+        return;
+    };
+
+    useEffect(() => {
+        // Получаем параметры из адресной строки
+        const queryParams = new URLSearchParams(location.search);
+        const token = queryParams.get("token");
+        const status = queryParams.get("status");
+
+        if (typeof token === "string" && typeof status === "string") {
+            sendTokenAndStatus({
+                token,
+                status,
+            });
+        }
+    }, [location.search]);
 
     return (
         <>
