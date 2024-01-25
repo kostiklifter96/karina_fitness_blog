@@ -104,6 +104,14 @@
             gap: 20px;
             font-size: 16px;
 
+            &-clientInfo {
+                // display: grid;
+                // grid-template-columns: 1fr;
+                // grid-template-rows: 20px;
+                word-wrap: break-word;
+                overflow-x: hidden;
+            }
+
             &-buttons {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);

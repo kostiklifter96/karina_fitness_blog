@@ -43,14 +43,14 @@
         justify-content: center;
         align-items: center;
 
-        & a {
+        & button {
             background: black !important;
             animation: pulse-2 0.6s ease infinite;
             color: white;
-            font-size: 20px;
+            font-size: 16px;
         }
 
-        & a:hover {
+        & button:hover {
             color: white;
         }
     }

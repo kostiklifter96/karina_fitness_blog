@@ -12,6 +12,9 @@ export const RequiredFormChangeOrCreate = ({
     setPaymentStatus,
     setTextForMailer,
     setStream,
+    setTelNumber,
+    setPaymentToken,
+    setTelegram,
 }: IFormForChangeOrCreate) => {
     let styleStr = "addClient__form";
 
@@ -37,6 +40,24 @@ export const RequiredFormChangeOrCreate = ({
                 disabled={loading}
                 onChange={(e) => setName(e.target.value)}
                 defaultValue={clientInfo?.name}
+                className='addClient__form-input'
+            />
+            <input
+                type='text'
+                placeholder='Номер телефона'
+                required
+                disabled={loading}
+                onChange={(e) => setTelNumber(e.target.value)}
+                defaultValue={clientInfo?.telNumber}
+                className='addClient__form-input'
+            />
+            <input
+                type='text'
+                placeholder='Ник в телеграм'
+                required
+                disabled={loading}
+                onChange={(e) => setTelegram(e.target.value)}
+                defaultValue={clientInfo?.telegram}
                 className='addClient__form-input'
             />
             <textarea
@@ -81,6 +102,15 @@ export const RequiredFormChangeOrCreate = ({
                 disabled={loading}
                 onChange={(e) => setPaymentStatus(+e.target.value)}
                 defaultValue={clientInfo?.paymentStatus}
+                className='addClient__form-input'
+            />
+            <input
+                type='text'
+                placeholder='Токен'
+                required
+                disabled={loading}
+                onChange={(e) => setPaymentToken(e.target.value)}
+                defaultValue={clientInfo?.paymentToken}
                 className='addClient__form-input'
             />
             {setTextForMailer !== undefined && (

@@ -26,8 +26,6 @@ export const useRegistrationClient = () => {
             paymentToken: res.token,
         };
 
-        // console.log(clientInfoData);
-
         if (
             clientInfoData.email ||
             clientInfoData.name ||

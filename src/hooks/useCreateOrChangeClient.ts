@@ -17,6 +17,9 @@ export const useCreateOrChangeClient = () => {
     const [amount, setAmount] = useState<number>(0);
     const [stream, setStream] = useState<number>(0);
     const [paymentStatus, setPaymentStatus] = useState<number>(0);
+    const [telNumber, setTelNumber] = useState("");
+    const [telegram, setTelegram] = useState("");
+    const [paymentToken, setPaymentToken] = useState("");
     const [textForMailer, setTextForMailer] = useState("");
 
     const dispatch = useAppDispatch();
@@ -37,6 +40,9 @@ export const useCreateOrChangeClient = () => {
             paymentStatus ||
             name ||
             stream ||
+            telNumber ||
+            telegram ||
+            paymentToken ||
             textForMailer
         ) {
             const dataCreateClient: ICreateClient = {
@@ -47,14 +53,17 @@ export const useCreateOrChangeClient = () => {
                 amount,
                 stream,
                 paymentStatus,
+                telegram,
+                telNumber,
+                paymentToken,
                 textForMailer,
             };
 
             try {
                 setLoading(true);
                 const res = await fetch(
-                    `${process.env.REACT_APP_BACKEND_PROD}createClient?apikey=${process.env.REACT_APP_API_KEY}`,
-                    // `http://localhost:4999/createClient?apikey=${process.env.REACT_APP_API_KEY}`,
+                    // `${process.env.REACT_APP_BACKEND_PROD}createClient?apikey=${process.env.REACT_APP_API_KEY}`,
+                    `http://localhost:4999/createClient?apikey=${process.env.REACT_APP_API_KEY}`,
                     {
                         method: "POST",
                         headers: {
@@ -108,6 +117,9 @@ export const useCreateOrChangeClient = () => {
             paymentStatus ||
             name ||
             stream ||
+            telNumber ||
+            telegram ||
+            paymentToken ||
             clientId
         ) {
             const dataChangeClient = {
@@ -118,14 +130,17 @@ export const useCreateOrChangeClient = () => {
                 uid,
                 stream,
                 amount,
+                telNumber,
+                telegram,
+                paymentToken,
                 paymentStatus,
             };
 
             try {
                 setLoading(true);
                 const res = await fetch(
-                    `${process.env.REACT_APP_BACKEND_PROD}updateClient?apikey=${process.env.REACT_APP_API_KEY}`,
-                    // `http://localhost:4999/updateClient?apikey=${process.env.REACT_APP_API_KEY}`,
+                    // `${process.env.REACT_APP_BACKEND_PROD}updateClient?apikey=${process.env.REACT_APP_API_KEY}`,
+                    `http://localhost:4999/updateClient?apikey=${process.env.REACT_APP_API_KEY}`,
 
                     {
                         method: "PUT",
@@ -168,7 +183,13 @@ export const useCreateOrChangeClient = () => {
         amount,
         paymentStatus,
         loading,
+        telNumber,
+        telegram,
+        paymentToken,
         clientId,
+        setTelNumber,
+        setTelegram,
+        setPaymentToken,
         setClientId,
         setTextarea,
         setEmail,

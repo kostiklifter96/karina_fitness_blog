@@ -110,6 +110,9 @@ export interface IClient {
     amount: number;
     stream: number;
     paymentStatus: number;
+    telNumber: string;
+    paymentToken: string;
+    telegram: string;
     textForMailer?: string;
 }
 
@@ -121,6 +124,9 @@ export interface ICreateClient {
     amount: number;
     stream: number;
     paymentStatus: number;
+    telNumber: string;
+    paymentToken: string;
+    telegram: string;
 
     textForMailer?: string;
 }
@@ -163,7 +169,9 @@ export interface IFormForChangeOrCreate {
     setUID: React.Dispatch<React.SetStateAction<string>>;
     setAmount: React.Dispatch<React.SetStateAction<number>>;
     setStream: React.Dispatch<React.SetStateAction<number>>;
-
+    setTelegram: React.Dispatch<React.SetStateAction<string>>;
+    setTelNumber: React.Dispatch<React.SetStateAction<string>>;
+    setPaymentToken: React.Dispatch<React.SetStateAction<string>>;
     setPaymentStatus: React.Dispatch<React.SetStateAction<number>>;
     setTextForMailer?: React.Dispatch<React.SetStateAction<string>>;
     loading: boolean;

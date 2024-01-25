@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getPaymentURL } from "utils/getPaymentURL";
+import { changeStatusRegistationClient } from "store/reducer/adminReducer";
+import { useAppDispatch } from "store/store";
 import "./calorieСalculator.scss";
 
 const option = [
@@ -32,17 +33,7 @@ export const CalorieСalculator = () => {
     const [age, setAge] = useState<number>(0);
     const [activeLevel, setActivLevel] = useState<number>(0);
     const [resCal, setResCal] = useState<number>(0);
-    const [linkUrl, setLinkUrl] = useState<string>("");
-
-    const handlerPay = async () => {
-        setLinkUrl(
-            await getPaymentURL(Number(process.env.REACT_APP_GENERAL_PRICE)),
-        );
-    };
-
-    useEffect(() => {
-        handlerPay();
-    }, []);
+    const dispatch = useAppDispatch();
 
     useEffect(() => {
         if (weight && height && age && activeLevel) {
@@ -163,14 +154,14 @@ export const CalorieСalculator = () => {
                         </ul>
                     </div>
                     <div className='calorieСalculator__btn'>
-                        <a
-                            href={linkUrl}
+                        <button
                             className='btn'
-                            target='_blank'
-                            rel='noreferrer'
+                            onClick={() =>
+                                dispatch(changeStatusRegistationClient(true))
+                            }
                         >
                             Купить доступ
-                        </a>
+                        </button>
                     </div>
                 </div>
             </section>

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { changeStatusRegistationClient } from "store/reducer/adminReducer";
+import { useAppDispatch } from "store/store";
 import { IPortfolio } from "types/types";
-import { getPaymentURL } from "utils/getPaymentURL";
 import { data } from "../../../data/data";
 import { PortfolioItem } from "./PortfolioItem";
 import "./portfolio.scss";
@@ -8,15 +8,7 @@ import "./portfolio.scss";
 const portfolio: IPortfolio[] = data[0].portfolio;
 
 export const Portfolio = () => {
-    const [linkUrl, setLinkUrl] = useState<string>("");
-
-    const handlerPay = async () => {
-        setLinkUrl(await getPaymentURL());
-    };
-
-    useEffect(() => {
-        handlerPay();
-    }, []);
+    const dispatch = useAppDispatch();
     return (
         <section className='portfolio' id='portfolio'>
             <div className='container'>
@@ -34,15 +26,13 @@ export const Portfolio = () => {
                     ))}
                 </div>
 
-                <div className='portfolio__btn'>
-                    <a
-                        href={linkUrl}
-                        className='btn'
-                        target='_blank'
-                        rel='noreferrer'
-                    >
-                        Купить
-                    </a>
+                <div
+                    className='portfolio__btn'
+                    onClick={() =>
+                        dispatch(changeStatusRegistationClient(true))
+                    }
+                >
+                    <button className='btn'>Купить</button>
                 </div>
             </div>
         </section>

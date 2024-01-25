@@ -31,6 +31,14 @@ export const ClientsListItem = ({
                         <span>email: </span> {client.email}
                     </div>
                     <div>
+                        <span>number: </span>
+                        {client.telNumber}
+                    </div>
+                    <div>
+                        <span>telegram: </span>
+                        {client.telegram}
+                    </div>
+                    <div>
                         <span>textarea: </span>
                         {client.textarea}
                     </div>
@@ -49,6 +57,10 @@ export const ClientsListItem = ({
                     <div>
                         <span>paymentStatus: </span>
                         {client.paymentStatus}
+                    </div>
+                    <div>
+                        <span>token: </span>
+                        {client.paymentToken}
                     </div>
                 </div>
                 <div className='admin-clientList__item-buttons'>

@@ -21,6 +21,9 @@ export const ModalAddOrChangeClient = () => {
         createClient,
         closeModalCreateOrChangeClient,
         updateClient,
+        setTelNumber,
+        setTelegram,
+        setPaymentToken,
     } = useCreateOrChangeClient();
 
     useEffect(() => {
@@ -33,7 +36,10 @@ export const ModalAddOrChangeClient = () => {
                 clientFullInfoFromList.paymentStatus ||
                 clientFullInfoFromList.name ||
                 clientFullInfoFromList.id ||
-                clientFullInfoFromList.stream
+                clientFullInfoFromList.stream ||
+                clientFullInfoFromList.telegram ||
+                clientFullInfoFromList.telNumber ||
+                clientFullInfoFromList.paymentToken
             ) {
                 setTextarea(clientFullInfoFromList.textarea);
                 setEmail(clientFullInfoFromList.email);
@@ -43,6 +49,9 @@ export const ModalAddOrChangeClient = () => {
                 setPaymentStatus(clientFullInfoFromList.paymentStatus);
                 setClientId(clientFullInfoFromList.id);
                 setStream(clientFullInfoFromList.stream);
+                setTelNumber(clientFullInfoFromList.telNumber);
+                setTelegram(clientFullInfoFromList.telegram);
+                setPaymentToken(clientFullInfoFromList.paymentToken);
             }
         }
     }, [
@@ -55,6 +64,9 @@ export const ModalAddOrChangeClient = () => {
         setUID,
         setStream,
         clientFullInfoFromList,
+        setTelNumber,
+        setTelegram,
+        setPaymentToken,
     ]);
 
     return (
@@ -84,6 +96,9 @@ export const ModalAddOrChangeClient = () => {
                         setTextarea={setTextarea}
                         setUID={setUID}
                         setStream={setStream}
+                        setTelegram={setTelegram}
+                        setTelNumber={setTelNumber}
+                        setPaymentToken={setPaymentToken}
                         submitFunc={updateClient}
                     />
                 ) : (
@@ -96,6 +111,9 @@ export const ModalAddOrChangeClient = () => {
                         setTextarea={setTextarea}
                         setUID={setUID}
                         setStream={setStream}
+                        setTelegram={setTelegram}
+                        setTelNumber={setTelNumber}
+                        setPaymentToken={setPaymentToken}
                         submitFunc={createClient}
                         setTextForMailer={setTextForMailer}
                     />

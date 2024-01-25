@@ -60,7 +60,7 @@ export const SuccessPage = () => {
                 </header>
                 <div className='successPage__info'>
                     <div className='successPage__info-result'>
-                        <p>ДОБРО ПОЖАЛОВАТЬ В NAUMOVA_TEAM!</p>
+                        <p>ДОБРО ПОЖАЛОВАТЬ В NAUMOVA TEAM!</p>
                     </div>
                     <div>
                         <div className='successPage__info-instructions'>

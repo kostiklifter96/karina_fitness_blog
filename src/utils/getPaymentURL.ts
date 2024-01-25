@@ -16,11 +16,7 @@ export const getPaymentURL = async () => {
                 auto_return: "0",
                 button_text: "Оплатить",
                 button_next_text: "Вернуться в магазин",
-                notification_url: `${process.env.REACT_APP_BACKEND_PROD}payment`,
                 language: "ru",
-                // customer_fields: {
-                //     visible: ["first_name", "last_name", "email"],
-                // },
             },
             order: {
                 currency: "BYN",
@@ -47,7 +43,6 @@ export const getPaymentURL = async () => {
 
         const data = await res.json();
 
-        // return await data.checkout.redirect_url;
         return await data.checkout;
     } catch (error) {
         if (error instanceof Error) {
