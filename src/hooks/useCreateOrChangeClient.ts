@@ -139,8 +139,8 @@ export const useCreateOrChangeClient = () => {
             try {
                 setLoading(true);
                 const res = await fetch(
-                    // `${process.env.REACT_APP_BACKEND_PROD}updateClient?apikey=${process.env.REACT_APP_API_KEY}`,
-                    `http://localhost:4999/updateClient?apikey=${process.env.REACT_APP_API_KEY}`,
+                    `${process.env.REACT_APP_BACKEND_PROD}updateClient?apikey=${process.env.REACT_APP_API_KEY}`,
+                    // `http://localhost:4999/updateClient?apikey=${process.env.REACT_APP_API_KEY}`,
 
                     {
                         method: "PUT",

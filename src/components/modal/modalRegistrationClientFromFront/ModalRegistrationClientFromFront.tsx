@@ -1,3 +1,4 @@
+import { CloseIcon } from "components/clientComponents/svgIcon/CloseIcon";
 import { useRegistrationClient } from "hooks/useRegistrationClient";
 import { InputMask, InputMaskChangeEvent } from "primereact/inputmask";
 import { changeStatusRegistationClient } from "store/reducer/adminReducer";
@@ -30,7 +31,18 @@ export const ModalRegistrationClientFromFront = () => {
                 className='modalRegistrationClientFromFront__section'
                 onClick={(e) => e.stopPropagation()}
             >
-                <h1>Сумма: {truncatedNumber} BYN</h1>
+                <div
+                    className='modalRegistrationClientFromFront__closeicon'
+                    onClick={() =>
+                        dispatch(changeStatusRegistationClient(false))
+                    }
+                >
+                    <CloseIcon />
+                </div>
+                <div className='modalRegistrationClientFromFront__price'>
+                    <h1>Сумма: {truncatedNumber} BYN</h1>{" "}
+                </div>
+
                 <div className='modalRegistrationClientFromFront__info'>
                     Оставьте, пожалуйста, свои контактные данные. После успешной
                     оплаты на ваш e-mail будет отправленна ссылка на

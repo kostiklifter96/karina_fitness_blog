@@ -37,7 +37,8 @@ export const useRegistrationClient = () => {
                 console.log(clientInfoData);
 
                 const responce = await fetch(
-                    `http://localhost:4999/registration?apikey=${process.env.REACT_APP_API_KEY}`,
+                    `${process.env.REACT_APP_BACKEND_PROD}registration?apikey=${process.env.REACT_APP_API_KEY}`,
+                    // `http://localhost:4999/registration?apikey=${process.env.REACT_APP_API_KEY}`,
                     {
                         method: "POST",
                         headers: {

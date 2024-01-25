@@ -293,7 +293,7 @@
 
         &__btns {
             position: absolute;
-            top: 75%;
+            top: 70%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
@@ -360,12 +360,16 @@
         background-position: right 31% center;
         background-repeat: no-repeat;
 
+        &__btns {
+            top: 69%;
+        }
+
         &__title {
             position: absolute;
             top: 6%;
             left: 5%;
             width: 345px;
-            font-size: 28px;
+            font-size: 28.1px;
             line-height: 27px;
             color: black;
         }
@@ -483,12 +487,16 @@
         background-position: right 31% center;
         background-repeat: no-repeat;
 
+        &__btns {
+            top: 66%;
+        }
+
         &__title {
             position: absolute;
             top: 6%;
             left: 5%;
             width: 345px;
-            font-size: 28px;
+            font-size: 28.19px;
             line-height: 27px;
             color: black;
         }
