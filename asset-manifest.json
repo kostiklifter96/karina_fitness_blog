@@ -1,17 +1,21 @@
 {
   "files": {
-    "main.css": "/karina_fitness_blog/static/css/main.2257ec54.css",
-    "main.js": "/karina_fitness_blog/static/js/main.a8e65aa9.js",
+    "main.css": "/karina_fitness_blog/static/css/main.bfd70918.css",
+    "main.js": "/karina_fitness_blog/static/js/main.fbf98321.js",
+    "static/js/765.19a91833.chunk.js": "/karina_fitness_blog/static/js/765.19a91833.chunk.js",
     "static/media/promoTraining.mp4": "/karina_fitness_blog/static/media/promoTraining.df66e28c503ab046e6ae.mp4",
     "static/media/IMG_6713.JPG": "/karina_fitness_blog/static/media/IMG_6713.641fcf2b39bbf9c8d35c.JPG",
     "static/media/dark-resume.jpg": "/karina_fitness_blog/static/media/dark-resume.3aba6193c7db2b51ef71.jpg",
     "static/media/Blue-w.webp": "/karina_fitness_blog/static/media/Blue-w.7e42304d85dc5f2012e8.webp",
+    "static/media/flags@2x.png": "/karina_fitness_blog/static/media/flags@2x.140042eba8c90ae1cede.png",
+    "static/media/flags.png": "/karina_fitness_blog/static/media/flags.ae53191452bb217f0fa6.png",
     "index.html": "/karina_fitness_blog/index.html",
-    "main.2257ec54.css.map": "/karina_fitness_blog/static/css/main.2257ec54.css.map",
-    "main.a8e65aa9.js.map": "/karina_fitness_blog/static/js/main.a8e65aa9.js.map"
+    "main.bfd70918.css.map": "/karina_fitness_blog/static/css/main.bfd70918.css.map",
+    "main.fbf98321.js.map": "/karina_fitness_blog/static/js/main.fbf98321.js.map",
+    "765.19a91833.chunk.js.map": "/karina_fitness_blog/static/js/765.19a91833.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2257ec54.css",
-    "static/js/main.a8e65aa9.js"
+    "static/css/main.bfd70918.css",
+    "static/js/main.fbf98321.js"
   ]
 }
