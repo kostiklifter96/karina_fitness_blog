@@ -8,11 +8,13 @@ export const useRegistrationClient = () => {
     const [name, setName] = useState("");
     const [telNumber, setTelNumber] = useState("");
     const [telegram, setTelegram] = useState("");
+    const [loading, setLoading] = useState(false);
     const dispatch = useAppDispatch();
 
     const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        setLoading(true);
         const res: {
             token: string;
             redirect_url: string;
@@ -27,15 +29,14 @@ export const useRegistrationClient = () => {
         };
 
         if (
-            clientInfoData.email ||
-            clientInfoData.name ||
-            clientInfoData.paymentToken ||
-            clientInfoData.telNumber ||
-            clientInfoData.telegram
+            clientInfoData.email &&
+            clientInfoData.name &&
+            clientInfoData.paymentToken &&
+            clientInfoData.telNumber
         ) {
-            try {
-                console.log(clientInfoData);
+            console.log(true);
 
+            try {
                 const responce = await fetch(
                     `${process.env.REACT_APP_BACKEND_PROD}registration?apikey=${process.env.REACT_APP_API_KEY}`,
                     // `http://localhost:4999/registration?apikey=${process.env.REACT_APP_API_KEY}`,
@@ -47,25 +48,26 @@ export const useRegistrationClient = () => {
                         body: JSON.stringify(clientInfoData),
                     },
                 );
-
                 const data = await responce.json();
-
                 if (data.statusSendEmail) {
                     if (res.redirect_url) {
                         window.location.href = res.redirect_url;
                     }
+                    setLoading(false);
                 }
-
                 if (!data.statusSendEmail) {
+                    setLoading(false);
                     alert("Ошибка регистрации. Попробуйте еще раз");
                 }
             } catch (error) {
                 if (error instanceof Error) {
                     alert("Ошибка регистрации. Попробуйте еще раз");
                 }
+                setLoading(false);
             }
         } else {
             alert("Не хватает данных из формы");
+            setLoading(false);
         }
 
         dispatch(changeStatusRegistationClient(false));
@@ -81,5 +83,6 @@ export const useRegistrationClient = () => {
         setTelNumber,
         setTelegram,
         onSubmit,
+        loading,
     };
 };

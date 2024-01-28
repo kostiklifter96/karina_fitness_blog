@@ -32,7 +32,7 @@ export const Contacts = () => {
                             <div className='title title__fz36 contacts__subtitle'>
                                 Задайте вопрос
                             </div>
-                            <div className='divider'></div>
+                            <div className='dividerr'></div>
 
                             <div className='title title__fz16 contacts__text'>
                                 Любым удобным для вас способом:

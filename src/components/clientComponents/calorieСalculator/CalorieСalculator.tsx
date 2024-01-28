@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { changeStatusRegistationClient } from "store/reducer/adminReducer";
 import { useAppDispatch } from "store/store";
 import "./calorieСalculator.scss";
 
@@ -50,7 +49,7 @@ export const CalorieСalculator = () => {
                     <div className='title title__fz36 timer__title'>
                         Расчет калорий для девушек
                     </div>
-                    <div className='divider'></div>
+                    <div className='dividerr'></div>
                     <div className='calorieСalculator__grid'>
                         <div className='calorieСalculator__grid-item'>
                             <input
@@ -152,16 +151,6 @@ export const CalorieСalculator = () => {
                                 </div>
                             </li>
                         </ul>
-                    </div>
-                    <div className='calorieСalculator__btn'>
-                        <button
-                            className='btn'
-                            onClick={() =>
-                                dispatch(changeStatusRegistationClient(true))
-                            }
-                        >
-                            Купить доступ
-                        </button>
                     </div>
                 </div>
             </section>

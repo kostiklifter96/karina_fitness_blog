@@ -39,6 +39,22 @@
             line-height: 22px;
         }
     }
+    &__btn {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & button {
+            background: black !important;
+            animation: pulse-2 0.6s ease infinite;
+            color: white;
+        }
+
+        & button:hover {
+            color: white;
+        }
+    }
 }
 
 @media (max-width: 1200px) {

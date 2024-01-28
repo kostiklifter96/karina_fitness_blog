@@ -15,7 +15,7 @@ export const ListQuestions = () => {
                 <div className='title title__fz36 title__section-subtitle'>
                     Вопрос-ответ
                 </div>
-                <div className='divider'></div>
+                <div className='dividerr'></div>
 
                 <div className='listQuestions__items'>
                     {list?.map((itemQuestion: IListQuestions) => (

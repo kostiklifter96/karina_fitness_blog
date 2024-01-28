@@ -1,12 +1,8 @@
 import { MarqueeComponent } from "components/index";
-import { changeStatusRegistationClient } from "store/reducer/adminReducer";
-import { useAppDispatch } from "store/store";
 import { data } from "../../../data/data";
 import "./courseDescription.scss";
 
 export const CourseDescription = () => {
-    const dispatch = useAppDispatch();
-
     return (
         <section className='courseDescription' id='courseDescription'>
             <div className='container'>
@@ -20,7 +16,7 @@ export const CourseDescription = () => {
                         <div className='title title__fz36 courseDescription__subtitle'>
                             За эти 3 недели вы:
                         </div>
-                        <div className='divider'></div>
+                        <div className='dividerr'></div>
                         {data[0].courseDescription?.map((el) => (
                             <p className='courseDescription__text' key={el.id}>
                                 {el.description}
@@ -47,17 +43,6 @@ export const CourseDescription = () => {
                                 {`     `}до -5кг{`     `}
                             </div>
                         </MarqueeComponent>{" "}
-                    </div>
-
-                    <div className='courseDescription__btn'>
-                        <button
-                            className='btn'
-                            onClick={() =>
-                                dispatch(changeStatusRegistationClient(true))
-                            }
-                        >
-                            Оплатить
-                        </button>
                     </div>
                 </div>
             </div>

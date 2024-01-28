@@ -18,7 +18,7 @@ export const Portfolio = () => {
                 <div className='title title__fz36 title__section-subtitle'>
                     До/После
                 </div>
-                <div className='divider'></div>
+                <div className='dividerr'></div>
 
                 <div className='portfolio__wrapper'>
                     {portfolio.map((item: IPortfolio) => (

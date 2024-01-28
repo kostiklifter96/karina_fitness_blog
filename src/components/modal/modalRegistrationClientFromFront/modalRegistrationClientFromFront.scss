@@ -49,6 +49,21 @@
         row-gap: 10px;
         // padding: 0 20px;
 
+        .intl-tel-input {
+            padding-left: 5px;
+            padding-top: 6px;
+            border-radius: 25px;
+            border: none;
+            background: rgb(215, 212, 212);
+            z-index: 10;
+
+            &:focus {
+                outline: none;
+                border: 1px solid $main-color; /* Можно задать стили рамки в фокусе по вашему выбору */
+                /* Другие стили, если необходимо */
+            }
+        }
+
         input {
             padding-left: 15px;
             border-radius: 25px;
@@ -60,6 +75,7 @@
                 /* Другие стили, если необходимо */
             }
         }
+
         button {
             background: #ecc91a;
             border-radius: 25px;

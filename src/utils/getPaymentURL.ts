@@ -4,12 +4,11 @@ window.Buffer = window.Buffer || require("buffer").Buffer;
 export const getPaymentURL = async () => {
     const params = JSON.stringify({
         checkout: {
-            test: true,
+            test: false,
             transaction_type: "payment",
             attempts: 3,
             settings: {
-                // success_url: `${process.env.REACT_APP_FRONT_PROD}success`,
-                success_url: `http://localhost:3000/success`,
+                success_url: `${process.env.REACT_APP_FRONT_PROD}success`,
                 decline_url: `${process.env.REACT_APP_FRONT_PROD}error`,
                 fail_url: `${process.env.REACT_APP_FRONT_PROD}error`,
                 cancel_url: `${process.env.REACT_APP_FRONT_PROD}error`,

@@ -10,7 +10,7 @@ export const AboutMe = () => {
                         <div className='title title__fz36 aboutMe__title'>
                             Обо мне
                         </div>
-                        <div className='divider'></div>
+                        <div className='dividerr'></div>
 
                         <div className='aboutMe__text'>
                             {data[0].aboutMe?.map((el) => (

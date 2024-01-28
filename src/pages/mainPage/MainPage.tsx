@@ -23,6 +23,7 @@ export const MainPage = () => {
     const statusRegistationClient = useAppSelector(
         (state) => state.admin.statusRegistationClient,
     );
+
     const {
         addActiveStyle,
         removeActiveStyle,
@@ -32,7 +33,7 @@ export const MainPage = () => {
     } = useTouch();
 
     return (
-        <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
+        <div>
             {statusRegistationClient && <ModalRegistrationClientFromFront />}
             <PanelNavigation addActiveStyle={addActiveStyle} />
             <Menu

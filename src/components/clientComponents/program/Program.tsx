@@ -1,4 +1,6 @@
 import { MarqueeComponent } from "components/index";
+import { changeStatusRegistationClient } from "store/reducer/adminReducer";
+import { useAppDispatch } from "store/store";
 import { IProgram } from "types/types";
 import { data } from "../../../data/data";
 import { ProgramItem } from "./ProgramItem";
@@ -7,24 +9,33 @@ import "./program.scss";
 const skills: IProgram[] = data[0].skills;
 
 export const Program = () => {
+    const dispatch = useAppDispatch();
+
     return (
         <>
             {" "}
             <section className='program'>
                 <div className='container' id='program'>
-                    {/* <h2 className='title title__fz16 title__section-title'>
-                    Навыки
-                </h2> */}
                     <div className='title title__fz36 title__section-subtitle'>
-                        Программа Naumova_team
+                        В онлайн абонемент входит:
                     </div>
-                    <div className='divider'></div>
+                    <div className='dividerr'></div>
 
                     <div className='program__items'>
                         {skills?.map((item) => (
                             <ProgramItem key={item.id} {...item} />
                         ))}
                     </div>
+                </div>
+                <div className='program__btn'>
+                    <button
+                        className='btn'
+                        onClick={() =>
+                            dispatch(changeStatusRegistationClient(true))
+                        }
+                    >
+                        Оплатить
+                    </button>
                 </div>
             </section>
             <MarqueeComponent speed={120}>

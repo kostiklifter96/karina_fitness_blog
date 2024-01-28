@@ -12,7 +12,7 @@ export const Advantages = () => {
                 <div className='title title__fz36 advantages__title'>
                     Преимущества
                 </div>
-                <div className='divider'></div>
+                <div className='dividerr'></div>
                 <div className='advantages__wrapper'>
                     <div className='advantages__column'>
                         <ul>

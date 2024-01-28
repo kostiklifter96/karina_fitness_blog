@@ -20,7 +20,7 @@ export const PromoTraining = () => {
                         <div className='promoTraining__subtitle'>
                             Пробная тренировка ягодиц
                         </div>{" "}
-                        <div className='divider'></div>
+                        <div className='dividerr'></div>
                         <div className='promoTraining__text'>
                             Погрузись в атмосферу домашнего комфорта, включи
                             свою любимую музыку и отправляйся в увлекательное

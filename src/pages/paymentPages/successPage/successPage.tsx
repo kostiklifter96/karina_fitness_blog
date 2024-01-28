@@ -14,10 +14,11 @@ export const SuccessPage = () => {
         token: string;
         status: string;
     }) => {
-        if (token || status) {
+        if (token && status) {
             try {
                 const response = await fetch(
-                    `http://localhost:4999/controlPayment?apikey=${process.env.REACT_APP_API_KEY}`,
+                    `${process.env.REACT_APP_BACKEND_PROD}controlPayment?apikey=${process.env.REACT_APP_API_KEY}`,
+                    // `http://localhost:4999/controlPayment?apikey=${process.env.REACT_APP_API_KEY}`,
                     {
                         method: "POST",
                         headers: {
@@ -29,10 +30,13 @@ export const SuccessPage = () => {
                 return response.json();
             } catch (error) {
                 if (error instanceof Error) {
-                    alert("Ошибка регистрации. Попробуйте еще раз");
+                    alert(
+                        "Ошибка регистрации!!! Напишите на почту naumova_team@mail.ru",
+                    );
                 }
             }
         }
+
         return;
     };
 
@@ -41,12 +45,16 @@ export const SuccessPage = () => {
         const queryParams = new URLSearchParams(location.search);
         const token = queryParams.get("token");
         const status = queryParams.get("status");
+        console.log(token);
+        console.log(status);
 
         if (typeof token === "string" && typeof status === "string") {
-            sendTokenAndStatus({
-                token,
-                status,
-            });
+            if (token && status) {
+                sendTokenAndStatus({
+                    token,
+                    status,
+                });
+            }
         }
     }, [location.search]);
 
