@@ -3,7 +3,7 @@ import "./footer.scss";
 
 export const Footer = () => {
     return (
-        <div className='footer'>
+        <footer className='footer'>
             <div className='container'>
                 <div className='footer__nav'>
                     <div className='footer__left'>
@@ -59,6 +59,6 @@ export const Footer = () => {
                     />
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };

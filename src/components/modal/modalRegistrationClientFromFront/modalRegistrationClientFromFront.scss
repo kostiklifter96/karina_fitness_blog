@@ -3,7 +3,7 @@
 
 .modalRegistrationClientFromFront {
     position: fixed;
-    top: 0;
+    top: -15px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -45,9 +45,41 @@
         display: grid;
         justify-content: center;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 50px);
+        grid-template-rows: repeat(6, 50px);
         row-gap: 10px;
         // padding: 0 20px;
+
+        .promocode {
+            position: relative;
+
+            display: grid;
+            grid-template-columns: 55% 40%;
+            justify-content: space-between;
+
+            label {
+                position: absolute;
+                z-index: 5;
+                left: 11px;
+                top: -5px;
+                font-size: 10px;
+                font-weight: bold;
+                padding: 2px 4px;
+                background: rgb(215, 212, 212);
+                border-radius: 5px;
+                color: rgb(216, 16, 16);
+            }
+
+            div {
+                background: #ecc91a;
+                border-radius: 25px;
+                border: none;
+                color: #000000;
+                display: flex;
+                justify-content: center; /* Горизонтальное центрирование */
+                align-items: center;
+                cursor: pointer;
+            }
+        }
 
         .intl-tel-input {
             padding-left: 5px;
@@ -100,7 +132,24 @@
         }
 
         &__form {
-            grid-template-rows: repeat(5, 50px);
+            grid-template-rows: repeat(6, 50px);
+        }
+    }
+}
+
+@media (max-width: 365px) {
+    .modalRegistrationClientFromFront {
+        &__section {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 0 10px;
+            max-width: 320px;
+        }
+
+        &__form {
+            grid-template-rows: repeat(6, 50px);
+            grid-template-columns: 270px;
+            font-size: 13px;
         }
     }
 }

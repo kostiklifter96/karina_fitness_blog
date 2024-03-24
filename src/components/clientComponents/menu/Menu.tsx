@@ -37,7 +37,7 @@ export const Menu = ({ activeStyle, removeActiveStyle }: IMenu) => {
                             className='menu__link'
                             onClick={() => removeActiveStyle()}
                         >
-                            <a href='#program'>NAUMOVA_TEAM</a>
+                            <a href='#program'>ОНЛАЙН АБОНЕМЕНТ</a>
                         </li>{" "}
                         <li
                             className='menu__link'

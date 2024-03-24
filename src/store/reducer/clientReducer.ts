@@ -11,6 +11,7 @@ interface IInitialStateAdmin {
     sortByPaymentTime: string;
     statusPayment: number;
     numberOfThreads: number[];
+    currentPrice: number;
 }
 
 const initialState: IInitialStateAdmin = {
@@ -23,12 +24,17 @@ const initialState: IInitialStateAdmin = {
     clientEmailFromList: "",
     personalPaymentUrl: "",
     numberOfThreads: [],
+    currentPrice: 6500,
 };
 
 export const clientReducer = createSlice({
     name: "CLIENT",
     initialState,
     reducers: {
+        getCurrentPrice: (state, action) => {
+            state.currentPrice = action.payload;
+        },
+
         getAllClientsFromDataBase: (state, action) => {
             state.clientList = action.payload;
         },
@@ -176,4 +182,5 @@ export const {
     filterClientListByPaymentTime,
     filterClientListByStatusPayment,
     getNumberOfThreadsForSelectList,
+    getCurrentPrice,
 } = clientReducer.actions;

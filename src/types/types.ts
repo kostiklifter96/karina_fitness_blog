@@ -185,3 +185,8 @@ export interface IClientListControlBtn {
     handlerModalSendEmail: () => void;
     handlerModalCreateNewsletter: () => void;
 }
+
+export enum ErrorMessage {
+    requiredField = "All fields are required",
+    clientOrCode = "The client or code does not exist",
+}

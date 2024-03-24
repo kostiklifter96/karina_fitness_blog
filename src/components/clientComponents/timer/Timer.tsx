@@ -2,7 +2,7 @@ import { useTimer } from "hooks/useTimer";
 import "./timer.scss";
 
 export const Timer = () => {
-    const date = new Date("Thu, 12 Feb 2024 00:00:00");
+    const date = new Date("Thu, 8 Apr 2024 00:00:00");
 
     const { day, hours, minutes, seconds, diffDays, diffS, diffH, diffM } =
         useTimer({ date });

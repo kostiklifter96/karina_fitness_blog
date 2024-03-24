@@ -30,8 +30,6 @@ export const useCreateNewsletter = () => {
             threads,
         };
 
-        console.log(dataSendNewsletter);
-
         try {
             setLoading(true);
             const res = await fetch(

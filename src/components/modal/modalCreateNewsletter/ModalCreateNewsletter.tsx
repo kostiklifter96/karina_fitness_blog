@@ -48,7 +48,7 @@ export const ModalCreateNewsletter = () => {
                             onChange={(e) => setTitle(e.target.value)}
                         />
                         <textarea
-                            placeholder='ИМЯ_ПОЛЬЗОВАТЕЛЯ, <br>'
+                            placeholder='ИМЯ_ПОЛЬЗОВАТЕЛЯ, <br><br>'
                             required
                             onChange={(e) => setText(e.target.value)}
                             className='createNewsletter__form-input'

@@ -25,7 +25,7 @@ export const PanelNavigation = ({ addActiveStyle }: IPromoHeader) => {
     }, [prevScrollPos]);
 
     return (
-        <header
+        <nav
             className='panelNavigation'
             style={{ top: visible ? "0" : "-70px" }}
         >
@@ -84,6 +84,6 @@ export const PanelNavigation = ({ addActiveStyle }: IPromoHeader) => {
                     </div>
                 </div>
             </div>
-        </header>
+        </nav>
     );
 };

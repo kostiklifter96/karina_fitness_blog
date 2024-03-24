@@ -6,7 +6,7 @@ import "./promo.scss";
 
 export const Promo = () => {
     return (
-        <section className='promo' id='promo'>
+        <header className='promo' id='promo'>
             <div className='container'>
                 <div className='promo__contacts'>
                     <a
@@ -43,25 +43,12 @@ export const Promo = () => {
                         <PriceIcon />
                     </div>
                     <div className='promo__info-start'>
-                        <div>59 BYN</div>
-                        <div>СТАРТ 12.02</div>
+                        <div>65 BYN</div>
+                        <div>СТАРТ 08.04</div>
                     </div>
                 </div>
 
                 <div className='promo__btns'>
-                    {/* <a
-                        href={linkUrl}
-                        target='_blank'
-                        className='promo__links-main btn'
-                        rel='noreferrer'
-                    >
-                        Купить доступ за{" "}
-                        {String(process.env.REACT_APP_GENERAL_PRICE).substring(
-                            0,
-                            2,
-                        )}{" "}
-                        BYN
-                    </a>{" "} */}
                     <a
                         href='#program'
                         className='promo__links-main btn'
@@ -71,6 +58,6 @@ export const Promo = () => {
                     </a>
                 </div>
             </div>
-        </section>
+        </header>
     );
 };

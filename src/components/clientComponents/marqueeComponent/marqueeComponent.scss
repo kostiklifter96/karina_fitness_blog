@@ -3,13 +3,15 @@
     grid-template-rows: minmax(25px, auto);
     align-items: center;
     font-weight: bold;
-    white-space: break-spaces;
+    white-space: pre-wrap;
 }
 
 .marq__block {
-    padding-top: 50px;
+    padding-top: 60px;
     display: grid;
     grid-template-columns: repeat(4, auto);
+    font-size: 16px;
+    line-height: 18px;
 
     & div {
         background: rgb(236, 201, 26);
@@ -39,9 +41,12 @@
         }
     }
 }
+
 @media (max-width: 576px) {
     .marq__block {
         & div {
+            height: 110px;
+            line-height: 20px;
             margin-right: 50px;
         }
     }

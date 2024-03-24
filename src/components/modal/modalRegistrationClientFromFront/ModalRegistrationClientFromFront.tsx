@@ -1,12 +1,29 @@
 import { CloseIcon } from "components/clientComponents/svgIcon/CloseIcon";
+import { usePromoCodeActivation } from "hooks/usePromoCodeActivation";
 import { useRegistrationClient } from "hooks/useRegistrationClient";
+import { useEffect, useState } from "react";
 import IntlTelInput from "react-intl-tel-input";
 import "react-intl-tel-input/dist/main.css";
 import { changeStatusRegistationClient } from "store/reducer/adminReducer";
-import { useAppDispatch } from "store/store";
+import { getCurrentPrice } from "store/reducer/clientReducer";
+import { useAppDispatch, useAppSelector } from "store/store";
+import { ErrorMessage } from "types/types";
 import "./modalRegistrationClientFromFront.scss";
 
 export const ModalRegistrationClientFromFront = () => {
+    const dispatch = useAppDispatch();
+    const currentPrice = useAppSelector((state) => state.client.currentPrice);
+    const [truncatedNumber, setTruncatedNumber] = useState(currentPrice);
+
+    const {
+        promoCode,
+        loadingPromoCode,
+        onClickPromo,
+        setEmailForPromo,
+        setPromoCode,
+        couponError,
+    } = usePromoCodeActivation();
+
     const {
         name,
         email,
@@ -20,17 +37,18 @@ export const ModalRegistrationClientFromFront = () => {
         loading,
     } = useRegistrationClient();
 
-    const dispatch = useAppDispatch();
-    const originalNumber = process.env.REACT_APP_GENERAL_PRICE!;
-    const truncatedNumber = Math.floor(+originalNumber / 100);
-
     const handleCloseWindow = () => {
         if (loading) {
             dispatch(changeStatusRegistationClient(true));
         } else {
             dispatch(changeStatusRegistationClient(false));
+            dispatch(getCurrentPrice(6500));
         }
     };
+
+    useEffect(() => {
+        setTruncatedNumber(currentPrice);
+    }, [currentPrice]);
 
     return (
         <div
@@ -48,7 +66,7 @@ export const ModalRegistrationClientFromFront = () => {
                     <CloseIcon />
                 </div>
                 <div className='modalRegistrationClientFromFront__price'>
-                    <h1>Сумма: {truncatedNumber} BYN</h1>{" "}
+                    <h1>Сумма: {truncatedNumber / 100} BYN</h1>{" "}
                 </div>
 
                 <div className='modalRegistrationClientFromFront__info'>
@@ -74,6 +92,7 @@ export const ModalRegistrationClientFromFront = () => {
                         placeholder='Ваш e-mail'
                         required
                         onChange={(e) => setEmail(e.target.value)}
+                        onBlur={(e) => setEmailForPromo(e.target.value)}
                         value={email}
                         disabled={loading}
                         className='modalRegistrationClientFromFront__form-item'
@@ -85,7 +104,7 @@ export const ModalRegistrationClientFromFront = () => {
                         value={telNumber}
                         defaultCountry='by'
                         useMobileFullscreenDropdown={false}
-                        format={false} // Отключаем внутренний форматировщик
+                        format={false}
                         onPhoneNumberChange={(
                             isValid,
                             newNumber,
@@ -103,6 +122,38 @@ export const ModalRegistrationClientFromFront = () => {
                         disabled={loading}
                         className='modalRegistrationClientFromFront__form-item'
                     />
+
+                    <div className='modalRegistrationClientFromFront__form-item promocode'>
+                        <label
+                            style={{ display: !couponError ? "none" : "block" }}
+                        >
+                            {couponError === ErrorMessage.clientOrCode &&
+                                "Неверные данные"}
+                            {couponError === ErrorMessage.requiredField &&
+                                "Введите email и промокод"}
+                        </label>
+                        <input
+                            type='text'
+                            placeholder='Промокод'
+                            onChange={(e) => setPromoCode(e.target.value)}
+                            value={promoCode}
+                            className='modalRegistrationClientFromFront__form-item'
+                        />
+
+                        <div
+                            onClick={() => onClickPromo()}
+                            style={{
+                                pointerEvents: loadingPromoCode
+                                    ? "none"
+                                    : "auto",
+                            }}
+                        >
+                            {loadingPromoCode
+                                ? "Идет проверка..."
+                                : "Применить"}
+                        </div>
+                    </div>
+
                     <button disabled={loading}>
                         {loading ? "Идет загрузка..." : "Перейти к оплате"}
                     </button>

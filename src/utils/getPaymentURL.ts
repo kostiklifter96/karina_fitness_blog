@@ -1,7 +1,7 @@
 import { Buffer } from "buffer";
 window.Buffer = window.Buffer || require("buffer").Buffer;
 
-export const getPaymentURL = async () => {
+export const getPaymentURL = async (newRate: number = 0) => {
     const params = JSON.stringify({
         checkout: {
             test: false,
@@ -19,7 +19,7 @@ export const getPaymentURL = async () => {
             },
             order: {
                 currency: "BYN",
-                amount: process.env.REACT_APP_GENERAL_PRICE,
+                amount: newRate,
                 description: "Order description",
             },
         },

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { changeStatusRegistationClient } from "store/reducer/adminReducer";
-import { useAppDispatch } from "store/store";
+import { useAppDispatch, useAppSelector } from "store/store";
 import { getPaymentURL } from "utils/getPaymentURL";
 
 export const useRegistrationClient = () => {
@@ -10,6 +10,7 @@ export const useRegistrationClient = () => {
     const [telegram, setTelegram] = useState("");
     const [loading, setLoading] = useState(false);
     const dispatch = useAppDispatch();
+    const currentPrice = useAppSelector((state) => state.client.currentPrice);
 
     const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -18,9 +19,10 @@ export const useRegistrationClient = () => {
         const res: {
             token: string;
             redirect_url: string;
-        } = await getPaymentURL();
+        } = await getPaymentURL(currentPrice);
 
         const clientInfoData = {
+            amount: currentPrice,
             name,
             email,
             telNumber: telNumber.replace(/[\(\)\-]/g, ""),
@@ -34,8 +36,6 @@ export const useRegistrationClient = () => {
             clientInfoData.paymentToken &&
             clientInfoData.telNumber
         ) {
-            console.log(true);
-
             try {
                 const responce = await fetch(
                     `${process.env.REACT_APP_BACKEND_PROD}registration?apikey=${process.env.REACT_APP_API_KEY}`,
