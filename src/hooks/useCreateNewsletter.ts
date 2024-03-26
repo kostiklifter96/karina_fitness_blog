@@ -5,7 +5,8 @@ import { useAppDispatch } from "store/store";
 export const useCreateNewsletter = () => {
     const [title, setTitle] = useState("");
     const [text, setText] = useState("");
-    const [threads, setThreads] = useState<number>(-1);
+    const [threads, setThreads] = useState<number>();
+    const [paymentStatus, setPaymentStatus] = useState<number>();
     const [loading, setLoading] = useState(false);
 
     const dispatch = useAppDispatch();
@@ -20,7 +21,7 @@ export const useCreateNewsletter = () => {
         e.preventDefault();
         e.currentTarget.reset();
 
-        if (!title || !text || !threads) {
+        if (!title || !text || !threads || !paymentStatus) {
             return;
         }
 
@@ -28,6 +29,7 @@ export const useCreateNewsletter = () => {
             title,
             text,
             threads,
+            paymentStatus,
         };
 
         try {
@@ -70,5 +72,6 @@ export const useCreateNewsletter = () => {
         setText,
         setTitle,
         setThreads,
+        setPaymentStatus,
     };
 };

@@ -10,8 +10,10 @@ export const ModalCreateNewsletter = () => {
         setText,
         setTitle,
         setThreads,
+        setPaymentStatus,
     } = useCreateNewsletter();
     const { numberOfThreads } = useAppSelector((state) => state.client);
+
     return (
         <>
             <div
@@ -32,13 +34,25 @@ export const ModalCreateNewsletter = () => {
                         <select
                             className='createNewsletter__form-select'
                             onChange={(e) => setThreads(+e.target.value)}
+                            required
                         >
+                            <option value=''>Потоки</option>
                             <option value={-1}>Все потоки</option>
                             {numberOfThreads.map((el) => (
                                 <option key={el} value={el}>
                                     {el} поток
                                 </option>
                             ))}
+                        </select>
+                        <select
+                            className='createNewsletter__form-select'
+                            onChange={(e) => setPaymentStatus(+e.target.value)}
+                            required
+                        >
+                            <option value=''>Оплаты</option>
+                            <option value={1}>Только для оплаченных</option>
+                            <option value={0}>Только для не оплаченных</option>
+                            <option value={-1}>Для всех</option>
                         </select>
                         <input
                             type='text'
