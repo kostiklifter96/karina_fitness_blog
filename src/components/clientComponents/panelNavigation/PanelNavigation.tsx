@@ -54,12 +54,12 @@ export const PanelNavigation = ({ addActiveStyle }: IPromoHeader) => {
                         >
                             ПРЕИМУЩЕСТВА
                         </a>
-                        <a
+                        {/* <a
                             href='#portfolio'
                             className='panelNavigation__info-item'
                         >
                             ДО / ПОСЛЕ
-                        </a>
+                        </a> */}
                         <a
                             href='#aboutMe'
                             className='panelNavigation__info-item'

@@ -4,7 +4,7 @@ window.Buffer = window.Buffer || require("buffer").Buffer;
 export const getPaymentURL = async (newRate: number = 0) => {
     const params = JSON.stringify({
         checkout: {
-            test: false,
+            test: true,
             transaction_type: "payment",
             attempts: 3,
             settings: {

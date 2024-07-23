@@ -1,10 +1,14 @@
 import { INSTIcon } from "components/clientComponents/svgIcon/INSTIcon";
 import { TGIcon } from "components/clientComponents/svgIcon/TGIcon";
 import { VKIcon } from "components/clientComponents/svgIcon/VKIcon";
+import { changeStatusRegistationClient } from "store/reducer/adminReducer";
+import { useAppDispatch } from "store/store";
 import { PriceIcon } from "../svgIcon/PriceIcon";
 import "./promo.scss";
 
 export const Promo = () => {
+    const dispatch = useAppDispatch();
+
     return (
         <header className='promo' id='promo'>
             <div className='container'>
@@ -44,18 +48,20 @@ export const Promo = () => {
                     </div>
                     <div className='promo__info-start'>
                         <div>65 BYN</div>
-                        <div>СТАРТ 08.04</div>
+                        <div>СТАРТ 08.07</div>
                     </div>
                 </div>
 
                 <div className='promo__btns'>
-                    <a
-                        href='#program'
+                    <button
                         className='promo__links-main btn'
                         rel='noreferrer'
+                        onClick={() =>
+                            dispatch(changeStatusRegistationClient(true))
+                        }
                     >
-                        ПОДРОБНЕЕ
-                    </a>
+                        ОПЛАТИТЬ
+                    </button>
                 </div>
             </div>
         </header>

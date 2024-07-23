@@ -10,10 +10,8 @@ import {
     Menu,
     ModalRegistrationClientFromFront,
     PanelNavigation,
-    Portfolio,
     Program,
     Promo,
-    PromoTraining,
     Timer,
 } from "components/index";
 import { useTouch } from "hooks/useTouch";
@@ -46,9 +44,9 @@ export const MainPage = () => {
             <Program />
             <CourseDescription />
             <Advantages />
-            <Portfolio />
+            {/* <Portfolio /> */}
             <AboutMe />
-            <PromoTraining />
+            {/* <PromoTraining /> */}
             <ListQuestions />
             <CalorieСalculator />
             <Contacts />

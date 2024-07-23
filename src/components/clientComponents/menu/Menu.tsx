@@ -14,7 +14,7 @@ export const Menu = ({ activeStyle, removeActiveStyle }: IMenu) => {
     return (
         <div className={menuStyle}>
             <div className='menu__block'>
-                <div
+                {/* <div
                     className='menu__close'
                     onClick={() => removeActiveStyle()}
                 >
@@ -30,7 +30,7 @@ export const Menu = ({ activeStyle, removeActiveStyle }: IMenu) => {
                             fill='black'
                         />
                     </svg>
-                </div>
+                </div> */}
                 <nav>
                     <ul className='menu__list'>
                         <li
@@ -51,12 +51,12 @@ export const Menu = ({ activeStyle, removeActiveStyle }: IMenu) => {
                         >
                             <a href='#advantages'>ПРЕИМУЩЕСТВА</a>
                         </li>
-                        <li
+                        {/* <li
                             className='menu__link'
                             onClick={() => removeActiveStyle()}
                         >
                             <a href='#portfolio'>ДО / ПОСЛЕ</a>
-                        </li>
+                        </li> */}
                         <li
                             className='menu__link'
                             onClick={() => removeActiveStyle()}
