@@ -1,3 +1,19 @@
 # https://www.robotstxt.org/robotstxt.html
+User-agent: Yandex
+Disallow: /success
+Disallow: /error
+Disallow: /admin/*
+Disallow: /login/*
+
+
+User-agent: Googlebot
+Disallow: /success
+Disallow: /error
+Disallow: /admin/*
+Disallow: /login/*
+
 User-agent: *
-Disallow:
+Disallow: /success
+Disallow: /error
+Disallow: /admin/*
+Disallow: /login/*
